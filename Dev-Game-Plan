@@ -1,0 +1,35 @@
+tsc --init
+
+[npx tsc]
+- - - - - - 
+tsc: The TypeScript compiler (TSC) is a command-line tool that can be used to compile TypeScript code to JavaScript. 
+
+npx: Npm is a package manager used to install and manage JavaScript packages, while npx is a tool that allows you to execute those packages directly without installing them globally. Essentially, npm installs packages, and npx runs them on-the-fly when needed.
+
+- - - - - - 
+[psql postgres --u postgres]
+
+sequelize init
+
+sequelize db:create
+
+sequelize model:generate --name League --attributes title:string
+
+sequelize db:migrate
+
+sequelize model:generate --name Team --attributes name:string
+
+sequelize db:migrate
+...
+
+...
+[sequelize migration:create --name add-players-to-team]
+[sequelize migration:create --name add-leagueid-to-team]
+
+
+- - - - - - 
+npm i @babel/core @babel/node @babel/preset-env
+... deleted .babelrc
+
+Babel: 
+- - - - - - 
