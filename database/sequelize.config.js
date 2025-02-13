@@ -1,10 +1,11 @@
-// sequelize.config.js
+require('dotenv').config();
+const process = require('process');
 
 module.exports = {
-  username: "postgres",
-  password: "postgres",
-  database: "laxtest04",
-  host: "127.0.0.1",
-  dialect: 'postgres',
-  port: 5432
+  username: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  host: process.env.DB_HOST,
+  dialect: process.env.DB_DIALECT,
+  port: process.env.DB_PORT
 };

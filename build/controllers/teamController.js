@@ -13,7 +13,7 @@ const League = require('../../database/models').League;
 const Team = require('../../database/models').Team;
 const createTeam = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const leagueId = req.query.leagueId;
+        const leagueId = String(req.query.leagueId);
         const name = req.query.name;
         const team = yield Team.create({
             name: name,

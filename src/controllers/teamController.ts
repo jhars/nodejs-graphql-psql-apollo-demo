@@ -5,7 +5,7 @@ const Team = require('../../database/models').Team
 const createTeam = async (req: Request, res: Response) => {
     try {
 
-    	const leagueId = req.query.leagueId
+    	const leagueId: string = String(req.query.leagueId)
     	const name = req.query.name
         const team = await Team.create({
         	name: name,

@@ -28,8 +28,22 @@ sequelize db:migrate
 
 
 - - - - - - 
+Babel: 
 npm i @babel/core @babel/node @babel/preset-env
 ... deleted .babelrc
-
-Babel: 
 - - - - - - 
+####################################################
+####################################################
+Next Steps:
+############
+- push/deploy to Heroku (get DB to work)
+- experiement w/ GraphQL
+- Players DB	
+	+ new models for players (do i need migrations?)
+
+- Remaining models/migrations/controllers
+
+####################################################
+DevOps:
+- Github Deployment Pipeline Hook
+- SSL Certificate
