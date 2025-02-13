@@ -4,12 +4,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
+const process_1 = __importDefault(require("process"));
+require('dotenv').config();
 const routes = require("./routes");
 const app = (0, express_1.default)();
 app.use(express_1.default.urlencoded({ extended: true }));
 app.use(express_1.default.json());
 routes(app);
-const port = 5000;
+const port = process_1.default.env.PORT;
 app.listen(port, () => {
-    console.log('App is now running at port ', port);
+    console.log(`App is now running in ${process_1.default.env.NODE_ENV} environment running at port ${port}`);
 });

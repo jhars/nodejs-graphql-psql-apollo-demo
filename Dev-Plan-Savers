@@ -1,0 +1,22 @@
+Dev-Plan-Savers:
+
+~~~~~~~~~~~~
+SAVER STEPS (not used)
+~~~~~~~~~~~~
+[npx tsc]
+...
+[psql postgres --u postgres]
+...
+
+
+[sequelize migration:create --name add-players-to-team]
+[sequelize migration:create --name add-leagueid-to-team]
+
+
+- - - - - - 
+Babel: 
+npm i @babel/core @babel/node @babel/preset-env
+... deleted .babelrc
+- - - - - - 
+~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~

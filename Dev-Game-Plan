@@ -1,13 +1,11 @@
 tsc --init
 
-[npx tsc]
 - - - - - - 
 tsc: The TypeScript compiler (TSC) is a command-line tool that can be used to compile TypeScript code to JavaScript. 
 
 npx: Npm is a package manager used to install and manage JavaScript packages, while npx is a tool that allows you to execute those packages directly without installing them globally. Essentially, npm installs packages, and npx runs them on-the-fly when needed.
 
 - - - - - - 
-[psql postgres --u postgres]
 
 sequelize init
 
@@ -22,28 +20,61 @@ sequelize model:generate --name Team --attributes name:string
 sequelize db:migrate
 ...
 
-...
-[sequelize migration:create --name add-players-to-team]
-[sequelize migration:create --name add-leagueid-to-team]
+
+Heroku Steps:
+
+- This was critically important command to run:
+	`npm install -g sequelize-cli`
+
+- Addeed to sequelize.config.js file
+```
+production: {
+ use_env_variable: 'DATABASE_URL'
+},
+```
+
+- This had to be added to models/index.js for it to work:
+```
+if (config.use_env_variable) {
+  // Required by Heroku - 'production' DB
+  sequelize = new Sequelize(process.env.DATABASE_URL, {
+      dialect: 'postgres',
+      dialectOptions: {
+        ssl: {
+          require: true,
+          rejectUnauthorized: false
+        }
+      }
+    }
+  );
+
+  sequelize
+    .authenticate()
+    .then(() => {
+      console.log('Connection has been established successfully.');
+    })
+    .catch(err => {
+      console.error('Unable to connect to the database:', err);
+    });
+    //END- Heroku Required Block
+} else {
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
+}
+```
 
 
-- - - - - - 
-Babel: 
-npm i @babel/core @babel/node @babel/preset-env
-... deleted .babelrc
-- - - - - - 
-####################################################
-####################################################
+################################################
+################################################
 Next Steps:
 ############
-- push/deploy to Heroku (get DB to work)
+
 - experiement w/ GraphQL
 - Players DB	
 	+ new models for players (do i need migrations?)
 
 - Remaining models/migrations/controllers
 
-####################################################
+################################################
 DevOps:
 - Github Deployment Pipeline Hook
 - SSL Certificate
