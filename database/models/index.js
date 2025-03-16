@@ -22,15 +22,20 @@ if (config.use_env_variable) {
       }
     }
   );
+  console.log("checkpoint 01")
 
   sequelize
     .authenticate()
     .then(() => {
       console.log('Connection has been established successfully.');
+      console.log("checkpoint 02")
     })
     .catch(err => {
       console.error('Unable to connect to the database:', err);
+      console.log("checkpoint 03")
     });
+
+    console.log("checkpoint 04")
     //END- Heroku Required Block
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);

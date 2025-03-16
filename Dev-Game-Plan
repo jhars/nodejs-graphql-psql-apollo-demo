@@ -26,6 +26,12 @@ Heroku Steps:
 - This was critically important command to run:
 	`npm install -g sequelize-cli`
 
+- For GraphQL/Apollo App, following env variable was required:
+`PGSSLMODE => no-verify`
+  ...probably just need to setup actual SSL cert (although haven't we learned in Cyber that SSL is compromised?)
+  ...fixes heroku error:
+  `no pg_hba.conf entry for host ...`
+
 - Addeed to sequelize.config.js file
 ```
 production: {
