@@ -4,6 +4,7 @@
   "main": "build/index.mjs",
   "scripts": {
     "watch": "tsc -p tsconfig.json --watch",
+    "dev": "nodemon --import=extensionless/register build/index.mjs",
     "start": "node --import=extensionless/register build/index.mjs"
   },
   "keywords": [],
@@ -13,9 +14,7 @@
   "extensionless": {
     "lookFor": [
       "js",
-      "mjs",
-      "ts",
-      "mts"
+      "mjs"
     ]
   },
   "dependencies": {
@@ -38,6 +37,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.10",
+    "nodemon": "^3.1.9",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   }

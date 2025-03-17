@@ -18,7 +18,10 @@ const server = new ApolloServer({
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
 });
 await server.start();
-app.use(cors(), bodyParser.json(), expressMiddleware(server, { context }));
+app.use(
+//@ts-ignore
+cors(), bodyParser.json(), expressMiddleware(server, { context }));
 const PORT = process.env.PORT;
+//@ts-ignore
 await new Promise((resolve) => httpServer.listen({ port: PORT }, resolve));
 console.log(`🚀 Server ready at on PORT: ${PORT}`);

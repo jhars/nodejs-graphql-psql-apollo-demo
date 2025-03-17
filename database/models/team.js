@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       this.belongsTo(models.League, {
         foreignKey: 'leagueId',
-        allowNull: false
+        allowNull: false,
+        as: 'league'
       })
     }
   }

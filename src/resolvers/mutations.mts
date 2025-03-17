@@ -1,21 +1,30 @@
 export default {
-  addLeague: (parent, args, { db }, info) => {
-    return db.League.create({
-      title: args.title,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }).then(newLeague => {
-      return db.League.findAll();
-    });
+  addLeague: async(parent, args, { db }, info) => {
+    try {
+      await db.League.create({
+        title: args.title,
+        createdAt: new Date(),
+        updatedAt: new Date()
+        
+      });
+      return await db.League.findAll();
+
+    } catch(error) {
+      console.error('Unable to connect to the database:', error);
+    }
   },
-  addTeam: (parent, args, { db }, info) => {
-    return db.Team.create({
-      name: args.name,
-      leagueId: args.leagueId,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }).then(newTeam => {
-      return db.Team.findAll();
-    });
+  addTeam: async(parent, args, { db }, info) => {
+    try {
+      await db.Team.create({
+        name: args.name,
+        leagueId: args.leagueId,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      })
+      return await db.Team.findAll();
+    
+    } catch(error) {
+      console.error('Unable to connect to the database:', error);
+    }
   }
 };
