@@ -1,6 +1,12 @@
+import { cacheControlFromInfo } from '@apollo/cache-control-types';
+
 export default {
   leagues: async(root, args, {db}, info) => {
     try {
+      
+      const cacheControl = cacheControlFromInfo(info)
+      cacheControl.setCacheHint({ maxAge: 300, scope: 'PUBLIC' });
+      
       return await db.League.findAll({
         include: [
           {

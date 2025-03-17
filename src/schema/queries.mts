@@ -1,4 +1,5 @@
 import types from "./types";
+
 export default `#graphql
   type Query {
     leagues: [League!],
