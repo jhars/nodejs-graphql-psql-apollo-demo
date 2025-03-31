@@ -8,6 +8,12 @@ module.exports = (sequelize, DataTypes) => {
         allowNull: false,
         as: 'league'
       })
+
+      this.hasOne(models.Roster, {
+        foreignKey: 'teamId',
+        allowNull: false,
+        as: 'team'
+      })
     }
   }
   Team.init({
