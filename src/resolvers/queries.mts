@@ -23,16 +23,27 @@ export default {
 
   teams: async(root, args, {db}, info) => {
     try {
-      const where = args.leagueId ? { id: args.leagueId } : {};
+      // const where = args.leagueId ? { leagueId: args.leagueId } : {};
+      //JH-NOTE: unreadable, and may not work, but...
+      // should handle case if given both parameters
+      // uses teamsId if its there, (would not use leagueId)
+      // then checks for leagueId, and should return teams in league succesfully
+      // ignores sleague Id if provided a teamId
+      // is this good graphql form?
+      const where = args.teamsId ? { id: args.teamsId } : args.leagueId ? { leagueId: args.leagueId } : {};
       
       return await db.Team.findAll({
       include: [
         {
           model: db.League,
-          as: 'league',
-          where
-        }
-      ]
+          as: 'league'
+        },
+        {
+          model: db.Roster,
+          as: 'roster',
+        },
+      ],
+      where
     });
     } catch(error) {
       console.error('Unable to connect to the database:', error);

@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
       this.hasOne(models.Roster, {
         foreignKey: 'teamId',
         allowNull: false,
-        as: 'team'
+        as: 'roster'
       })
     }
   }

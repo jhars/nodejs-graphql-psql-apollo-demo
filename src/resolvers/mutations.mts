@@ -47,9 +47,8 @@ export default {
     }
   },
 
-  addPlayerToRoster: async(parent, args, { db }, info) => {
+  addPlayerToTeam: async(parent, args, { db }, info) => {
     try {
-      // const where = args.teamId ? { id: args.leagueId } : {};
       const roster = await db.Roster.findOne({
           include: [
             {
@@ -58,12 +57,20 @@ export default {
               where: {id: args.teamId}
             }
           ]
-        // where: { teamId: args.teamId }
       })
       roster.setDataValue(args.rosterSpot.toLowerCase(), args.playerId)
 
       await roster.save();
-      return roster
+
+      return await db.Team.findOne({
+        include: [
+          {
+            model: db.Roster,
+            as: 'roster'
+          }
+        ],
+        where: args.teamId
+      })
     
     } catch(error) {
       console.error('Unable to connect to the database:', error);
