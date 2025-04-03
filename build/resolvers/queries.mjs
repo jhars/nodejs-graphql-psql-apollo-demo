@@ -43,5 +43,15 @@ export default {
         catch (error) {
             console.error('Unable to connect to the database:', error);
         }
-    }
+    },
+    players: async (root, args, { db }, info) => {
+        try {
+            const where = args.playerId ? { id: args.playerId } : args.teamsId ? { teamsId: args.teamsId } : {};
+            const players = await db.Player.findAll({ where });
+            return {};
+        }
+        catch (error) {
+            console.error('Unable to connect to the database:', error);
+        }
+    },
 };

@@ -48,6 +48,35 @@ export default `#graphql
     team: String
   }
 
+  type Statistics {
+    lastSeason: StatLineTotal
+    currentSeason: StatLineTotal
+    week1: StatLineTotal
+    week2: StatLineTotal
+    week3: StatLineTotal
+    week4: StatLineTotal
+    week5: StatLineTotal
+    week6: StatLineTotal
+    week7: StatLineTotal
+    week8: StatLineTotal
+    week9: StatLineTotal
+    week10: StatLineTotal
+  }
+
+  type ProjectedStatistics {
+    currentSeason: StatLineProjected
+    week1: StatLineProjected
+    week2: StatLineProjected
+    week3: StatLineProjected
+    week4: StatLineProjected
+    week5: StatLineProjected
+    week6: StatLineProjected
+    week7: StatLineProjected
+    week8: StatLineProjected
+    week9: StatLineProjected
+    week10: StatLineProjected
+  }
+
   type Roster {
     id: ID
     teamId: Int!
@@ -103,6 +132,49 @@ export default `#graphql
     shortHandedShots: Int
     unassistedGoals: Int
     assistedGoals: Int
+  }
+
+  type StatLineProjected {
+    id: ID
+    playerId: Int!
+    gamesPlayed: Float
+    points: Float
+    scoringPoints: Float
+    goals: Float
+    onePointGoals: Float
+    twoPointGoals: Float
+    assists: Float
+    shots: Float
+    shotPct: Float
+    shotsOnGoal: Float
+    shotsOnGoalPct: Float
+    twoPointShots: Float
+    twoPointShotPct: Float
+    twoPointShotsOnGoal: Float
+    twoPointShotsOnGoalPct: Float
+    turnovers: Float
+    causedTurnovers: Float
+    groundBalls: Float
+    touches: Float
+    totalPasses: Float
+    faceoffPct: Float
+    faceoffsWon: Float
+    faceoffsLost: Float
+    faceoffs: Float
+    saa: Float
+    saves: Float
+    savePct: Float
+    scoresAgainst: Float
+    twoPointGoalsAgainst: Float
+    numPenalties: Float
+    pim: Float
+    powerPlayGoals: Float
+    powerPlayShots: Float
+    powerPlayGoalsAgainst: Float
+    shortHandedGoals: Float
+    shortHandedShots: Float
+    unassistedGoals: Float
+    assistedGoals: Float
   }
 
   enum CacheControlScope {

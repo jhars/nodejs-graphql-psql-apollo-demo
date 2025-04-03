@@ -12,6 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       // belongs to many teams
+
+      // this.hasOne(models.StatLineSeason, {
+      //   foreignKey: 'playerId',
+      //   allowNull: false,
+      //   as: 'StatLineLastSeason'
+      // })
     }
   }
   Player.init({
