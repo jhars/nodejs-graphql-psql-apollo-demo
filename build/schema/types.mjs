@@ -46,21 +46,26 @@ export default `#graphql
     position: String!
     jersey: Int
     team: String
+    statistics: Statistics
   }
 
   type Statistics {
-    lastSeason: StatLineTotal
-    currentSeason: StatLineTotal
-    week1: StatLineTotal
-    week2: StatLineTotal
-    week3: StatLineTotal
-    week4: StatLineTotal
-    week5: StatLineTotal
-    week6: StatLineTotal
-    week7: StatLineTotal
-    week8: StatLineTotal
-    week9: StatLineTotal
-    week10: StatLineTotal
+    id: ID
+    playerId: Int!
+    season: String!
+    statLineLastSeason: StatLine
+    statLineLastSeasonId: ID
+    statLineCurrentSeasonId: ID
+    statLineWeek01Id: ID
+    statLineWeek02Id: ID
+    statLineWeek03Id: ID
+    statLineWeek04Id: ID
+    statLineWeek05Id: ID
+    statLineWeek06Id: ID
+    statLineWeek07Id: ID
+    statLineWeek08Id: ID
+    statLineWeek09Id: ID
+    statLineWeek10Id: ID
   }
 
   type ProjectedStatistics {
@@ -91,9 +96,10 @@ export default `#graphql
     attack2: Int
   }
 
-  type StatLineTotal {
+  type StatLine {
     id: ID
     playerId: Int!
+    playerStatisticsId: ID
     gamesPlayed: Int
     points: Int
     scoringPoints: Int

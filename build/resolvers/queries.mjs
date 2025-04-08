@@ -46,9 +46,24 @@ export default {
     },
     players: async (root, args, { db }, info) => {
         try {
-            const where = args.playerId ? { id: args.playerId } : args.teamsId ? { teamsId: args.teamsId } : {};
-            const players = await db.Player.findAll({ where });
-            return {};
+            // see above JH-NOTE for why I may want to use this
+            // const where = args.playerId ? { id: args.playerId } : args.teamsId ? { teamsId: args.teamsId } : {};
+            // const players = await db.Player.findAll({where});
+            const players = await db.Player.findAll({
+                include: [
+                    {
+                        model: db.Statistics,
+                        as: 'statistics',
+                        include: [
+                            {
+                                model: db.StatLine,
+                                as: 'statLineLastSeason'
+                            }
+                        ]
+                    }
+                ]
+            });
+            return players;
         }
         catch (error) {
             console.error('Unable to connect to the database:', error);
