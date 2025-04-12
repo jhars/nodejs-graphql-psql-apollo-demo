@@ -11,7 +11,11 @@ export default {
         include: [
           {
             model: db.Team,
-            as: 'teams'
+            as: 'teams',
+            include: {
+              model: db.Roster,
+              as: 'roster',
+            }
           }
         ]
       });
@@ -50,6 +54,8 @@ export default {
     }
   },
 
+
+
   players: async(root, args, {db}, info) => {
     try {
       // see above JH-NOTE for why I may want to use this
@@ -58,23 +64,34 @@ export default {
       const players = await db.Player.findAll({
       include: [
         {
-          model: db.Statistics,
-          as: 'statistics',
-          include: [
-            {
-              model: db.StatLine,
-              as: 'statLineLastSeason'  
-            }
-            
-          ]
+            model: db.Statistics,
+            as: 'statistics',
+            include: [
+              {
+                model: db.StatLine,
+                as: 'statLineWeek10',
+                where: {weekNumber: 10},
+                allowNull: true,
+                required: false,
+              },
+              {
+                model: db.StatLine,
+                as: 'statLineLastSeason',
+                where: {season: "2024", weekNumber: null},
+                allowNull: true,
+                required: false,
+              },
+
+            ]
         }
-      ]
-    });
+      ] //top level include
+      });
+      
       return players
 
     } catch(error) {
       console.error('Unable to connect to the database:', error);
     }
 
-  },
+  }
 };

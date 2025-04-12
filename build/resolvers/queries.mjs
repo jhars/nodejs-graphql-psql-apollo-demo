@@ -7,7 +7,11 @@ export default {
                 include: [
                     {
                         model: db.Team,
-                        as: 'teams'
+                        as: 'teams',
+                        include: {
+                            model: db.Roster,
+                            as: 'roster',
+                        }
                     }
                 ]
             });
@@ -57,16 +61,26 @@ export default {
                         include: [
                             {
                                 model: db.StatLine,
-                                as: 'statLineLastSeason'
-                            }
+                                as: 'statLineWeek10',
+                                where: { weekNumber: 10 },
+                                allowNull: true,
+                                required: false,
+                            },
+                            {
+                                model: db.StatLine,
+                                as: 'statLineLastSeason',
+                                where: { season: "2024", weekNumber: null },
+                                allowNull: true,
+                                required: false,
+                            },
                         ]
                     }
-                ]
+                ] //top level include
             });
             return players;
         }
         catch (error) {
             console.error('Unable to connect to the database:', error);
         }
-    },
+    }
 };

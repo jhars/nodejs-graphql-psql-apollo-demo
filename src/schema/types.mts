@@ -55,6 +55,7 @@ export default `#graphql
     season: String!
     statLineLastSeason: StatLine
     statLineLastSeasonId: ID
+    statLineCurrentSeason: StatLine
     statLineCurrentSeasonId: ID
     statLineWeek01Id: ID
     statLineWeek02Id: ID
@@ -65,7 +66,10 @@ export default `#graphql
     statLineWeek07Id: ID
     statLineWeek08Id: ID
     statLineWeek09Id: ID
+    statLineWeek10: StatLine
     statLineWeek10Id: ID
+    lastSeason: StatLine
+    week10: StatLine
   }
 
   type ProjectedStatistics {

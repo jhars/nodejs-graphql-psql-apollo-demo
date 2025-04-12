@@ -10,16 +10,28 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // this.hasOne(models.StatLine, {
-      //   foreignKey: 'playerStatisticsId',
-      //   allowNull: false,
-      //   as: 'statLineLastSeason'
-      // })
       this.hasOne(models.StatLine, {
+      // this.hasMany(models.StatLine, {
         foreignKey: 'playerStatisticsId',
-        allowNull: false,
-        as: 'statLineLastSeason'
+        as: 'statLineWeek10',
+        // sourceKey: 'statLineCurrentSeasonId',
+        allowNull: true,
+        // inverse: {
+        //   as: 'week10'
+        // }
       })
+
+      this.hasOne(models.StatLine, {
+      // this.hasMany(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineLastSeason',
+        // sourceKey: 'statLineWeek10Id',
+        allowNull: true,
+        // inverse: {
+        //   as: 'lastSeason'
+        // }
+      })
+
     }
   }
   Statistics.init({
