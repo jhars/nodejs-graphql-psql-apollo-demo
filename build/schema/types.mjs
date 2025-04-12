@@ -57,12 +57,27 @@ export default `#graphql
     statLineLastSeasonId: ID
     statLineCurrentSeason: StatLine
     statLineCurrentSeasonId: ID
+    statLineWeek01: StatLine
+    statLineWeek01Id: ID
+    statLineWeek02: StatLine
+    statLineWeek02Id: ID
+    statLineWeek03: StatLine
+    statLineWeek03Id: ID
+    statLineWeek04: StatLine
+    statLineWeek04Id: ID
+    statLineWeek05: StatLine
+    statLineWeek05Id: ID
+    statLineWeek06: StatLine
+    statLineWeek06Id: ID
+    statLineWeek07: StatLine
+    statLineWeek07Id: ID
+    statLineWeek08: StatLine
+    statLineWeek08Id: ID
     statLineWeek09: StatLine
     statLineWeek09Id: ID
     statLineWeek10: StatLine
     statLineWeek10Id: ID
     lastSeason: StatLine
-    week10: StatLine
   }
 
   type ProjectedStatistics {

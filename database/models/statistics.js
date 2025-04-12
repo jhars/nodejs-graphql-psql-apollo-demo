@@ -4,12 +4,57 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Statistics extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+    
     static associate(models) {
+
+      this.hasOne(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineWeek01',
+        allowNull: true,
+      })
+      
+      this.hasOne(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineWeek02',
+        allowNull: true,
+      })
+
+      this.hasOne(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineWeek03',
+        allowNull: true,
+      })
+
+      this.hasOne(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineWeek04',
+        allowNull: true,
+      })
+
+      this.hasOne(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineWeek05',
+        allowNull: true,
+      })
+
+      this.hasOne(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineWeek06',
+        allowNull: true,
+      })
+
+      this.hasOne(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineWeek07',
+        allowNull: true,
+      })
+
+      this.hasOne(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineWeek08',
+        allowNull: true,
+      })
+
       this.hasOne(models.StatLine, {
         foreignKey: 'playerStatisticsId',
         as: 'statLineWeek09',
@@ -25,6 +70,12 @@ module.exports = (sequelize, DataTypes) => {
         // inverse: {
         //   as: 'week10'
         // }
+      })
+
+      this.hasOne(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineCurrentSeason',
+        allowNull: true,
       })
 
       this.hasOne(models.StatLine, {
