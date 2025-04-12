@@ -57,14 +57,7 @@ export default `#graphql
     statLineLastSeasonId: ID
     statLineCurrentSeason: StatLine
     statLineCurrentSeasonId: ID
-    statLineWeek01Id: ID
-    statLineWeek02Id: ID
-    statLineWeek03Id: ID
-    statLineWeek04Id: ID
-    statLineWeek05Id: ID
-    statLineWeek06Id: ID
-    statLineWeek07Id: ID
-    statLineWeek08Id: ID
+    statLineWeek09: StatLine
     statLineWeek09Id: ID
     statLineWeek10: StatLine
     statLineWeek10Id: ID

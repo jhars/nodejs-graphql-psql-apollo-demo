@@ -61,6 +61,13 @@ export default {
                         include: [
                             {
                                 model: db.StatLine,
+                                as: 'statLineWeek09',
+                                where: { weekNumber: 9 },
+                                allowNull: true,
+                                required: false,
+                            },
+                            {
+                                model: db.StatLine,
                                 as: 'statLineWeek10',
                                 where: { weekNumber: 10 },
                                 allowNull: true,

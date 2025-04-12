@@ -11,41 +11,13 @@ module.exports = (sequelize, DataTypes) => {
      */
 
     static associate(models) {
-      this.belongsTo(models.Statistics, {
-       foreignKey: 'statLineLastSeasonId',
-        foreignKey: 'playerStatisticsId',
-        as: 'statLineLastSeason',
-        // inverse: {
-        //   as: 'week10'  
-        // }
-      })
-
       // this.belongsTo(models.Statistics, {
-      //   foreignKey: 'statLineWeek10Id',
-      //   as: 'statLineWeek10',
+      //  // foreignKey: 'statLineLastSeasonId',
+      //   foreignKey: 'playerStatisticsId',
+      //   as: 'statLineLastSeason',
       //   // inverse: {
       //   //   as: 'week10'  
       //   // }
-      // })
-
-      //==================================
-      // this.belongsTo(models.Statistics, {
-      // // this.hasOne(models.Statistics, {
-      //   foreignKey: 'playerStatisticsId',
-      //   // targetKey: 'playerStatisticsId',
-      //   // as: 'stat',
-      //   inverse: {
-      //     as: 'week10'  
-      //   }
-      // })
-
-      // this.belongsTo(models.Statistics, {
-      // // this.hasOne(models.Statistics, {
-      //   foreignKey: 'statLineLastSeasonId',
-      //   // as: 'statLineLastSeason',
-      //   inverse: {
-      //     as: 'lastSeason'
-      //   }
       // })
     }
   }

@@ -11,10 +11,16 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       this.hasOne(models.StatLine, {
-      // this.hasMany(models.StatLine, {
+        foreignKey: 'playerStatisticsId',
+        as: 'statLineWeek09',
+        allowNull: true,
+        // inverse: {
+        //   as: 'week09'
+        // }
+      })
+      this.hasOne(models.StatLine, {
         foreignKey: 'playerStatisticsId',
         as: 'statLineWeek10',
-        // sourceKey: 'statLineCurrentSeasonId',
         allowNull: true,
         // inverse: {
         //   as: 'week10'
@@ -22,10 +28,8 @@ module.exports = (sequelize, DataTypes) => {
       })
 
       this.hasOne(models.StatLine, {
-      // this.hasMany(models.StatLine, {
         foreignKey: 'playerStatisticsId',
         as: 'statLineLastSeason',
-        // sourceKey: 'statLineWeek10Id',
         allowNull: true,
         // inverse: {
         //   as: 'lastSeason'

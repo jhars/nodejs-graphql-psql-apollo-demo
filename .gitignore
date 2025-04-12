@@ -9,3 +9,4 @@ database/backup02.psql
 
 database/Demo-StatLine-Single.sql
 database/Demo-Statistics-Single.sql
+database/generate_UUIDs_ForWeeks.sql
