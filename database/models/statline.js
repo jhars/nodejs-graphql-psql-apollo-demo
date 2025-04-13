@@ -4,26 +4,11 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class StatLine extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-
-    static associate(models) {
-      // this.belongsTo(models.Statistics, {
-      //  // foreignKey: 'statLineLastSeasonId',
-      //   foreignKey: 'playerStatisticsId',
-      //   as: 'statLineLastSeason',
-      //   // inverse: {
-      //   //   as: 'week10'  
-      //   // }
-      // })
-    }
+    static associate(models) {}
   }
   StatLine.init({
     playerId: DataTypes.INTEGER,
-    playerStatisticsId: DataTypes.UUID,
+    statisticsId: DataTypes.UUID,
     season: DataTypes.STRING,
     weekNumber: DataTypes.INTEGER,
     gamesPlayed: DataTypes.INTEGER,

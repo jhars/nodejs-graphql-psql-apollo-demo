@@ -108,10 +108,51 @@ export default `#graphql
     attack2: Int
   }
 
+  input StatLineInput {
+    points: Int
+    scoringPoints: Int
+    goals: Int
+    onePointGoals: Int
+    twoPointGoals: Int
+    assists: Int
+    shots: Int
+    shotPct: Float
+    shotsOnGoal: Int
+    shotsOnGoalPct: Float
+    twoPointShots: Int
+    twoPointShotPct: Float
+    twoPointShotsOnGoal: Int
+    twoPointShotsOnGoalPct: Float
+    turnovers: Int
+    causedTurnovers: Int
+    groundBalls: Int
+    touches: Int
+    totalPasses: Int
+    faceoffPct: Float
+    faceoffsWon: Int
+    faceoffsLost: Int
+    faceoffs: Int
+    saa: Float
+    saves: Int
+    savePct: Float
+    scoresAgainst: Int
+    twoPointGoalsAgainst: Int
+    numPenalties: Int
+    pim: Float
+    powerPlayGoals: Int
+    powerPlayShots: Int
+    powerPlayGoalsAgainst: Int
+    shortHandedGoals: Int
+    shortHandedShots: Int
+    unassistedGoals: Int
+    assistedGoals: Int
+  }
+
   type StatLine {
     id: ID
     playerId: Int!
     playerStatisticsId: ID
+    season: String!
     gamesPlayed: Int
     points: Int
     scoringPoints: Int

@@ -2,11 +2,8 @@ node_modules/
 
 .env
 
-database/Demo-StatLine.sql
-database/Demo-Statistics.sql
-database/backup-DB
-database/backup02.psql
 
-database/Demo-StatLine-Single.sql
-database/Demo-Statistics-Single.sql
-database/generate_UUIDs_ForWeeks.sql
+
+database/backups/*
+
+database/scripts/*

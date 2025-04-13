@@ -8,83 +8,74 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek01',
         allowNull: true,
       })
       
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek02',
         allowNull: true,
       })
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek03',
         allowNull: true,
       })
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek04',
         allowNull: true,
       })
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek05',
         allowNull: true,
       })
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek06',
         allowNull: true,
       })
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek07',
         allowNull: true,
       })
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek08',
         allowNull: true,
       })
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek09',
         allowNull: true,
-        // inverse: {
-        //   as: 'week09'
-        // }
       })
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineWeek10',
         allowNull: true,
-        // inverse: {
-        //   as: 'week10'
-        // }
       })
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineCurrentSeason',
         allowNull: true,
       })
 
       this.hasOne(models.StatLine, {
-        foreignKey: 'playerStatisticsId',
+        foreignKey: 'statisticsId',
         as: 'statLineLastSeason',
         allowNull: true,
-        // inverse: {
-        //   as: 'lastSeason'
-        // }
       })
 
     }
@@ -97,24 +88,7 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: sequelize.literal('uuid_generate_v4()')
     },
     playerId: DataTypes.INTEGER,
-    season: DataTypes.STRING,
-    statLineLastSeasonId: {
-      allowNull: false,
-      primaryKey: false,
-      type: DataTypes.UUID,
-      defaultValue: sequelize.literal('uuid_generate_v4()')
-    },
-    statLineCurrentSeasonId: DataTypes.UUID,
-    statLineWeek01Id: DataTypes.UUID,
-    statLineWeek02Id: DataTypes.UUID,
-    statLineWeek03Id: DataTypes.UUID,
-    statLineWeek04Id: DataTypes.UUID,
-    statLineWeek05Id: DataTypes.UUID,
-    statLineWeek06Id: DataTypes.UUID,
-    statLineWeek07Id: DataTypes.UUID,
-    statLineWeek08Id: DataTypes.UUID,
-    statLineWeek09Id: DataTypes.UUID,
-    statLineWeek10Id: DataTypes.UUID
+    season: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Statistics',
