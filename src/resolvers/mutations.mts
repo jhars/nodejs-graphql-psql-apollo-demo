@@ -84,13 +84,6 @@ export default {
       const statistics = await db.Statistics.findOne({
         where: {playerId: args.playerId}
       })
-      // roster.setDataValue(args.rosterSpot.toLowerCase(), args.playerId)
-      // await roster.save();
-
-      // Needs to update StatLineCurrentSeason
-      // The ID might ensure that I do not create multiple statlines for the same week
-
-
 
       const stats = {
         playerId: statistics.playerId,
@@ -105,25 +98,25 @@ export default {
         twoPointGoals: args.statLine.twoPointGoals,
         assists: args.statLine.assists,
         shots: args.statLine.shots,
-        shotPct: args.statLine.shotPct,
+        shotPct: args.statLine.goals / args.statLine.shots,
         shotsOnGoal: args.statLine.shotsOnGoal,
-        shotsOnGoalPct: args.statLine.shotsOnGoalPct,
+        shotsOnGoalPct: args.statLine.goals / args.statLine.shotsOnGoal,
         twoPointShots: args.statLine.twoPointShots,
-        twoPointShotPct: args.statLine.twoPointShotPct,
+        twoPointShotPct: args.statLine.twoPointGoals / args.statLine.twoPointShots,
         twoPointShotsOnGoal: args.statLine.twoPointShotsOnGoal,
-        twoPointShotsOnGoalPct: args.statLine.twoPointShotsOnGoalPct,
+        twoPointShotsOnGoalPct: args.statLine.twoPointGoals / args.statLine.twoPointShotsOnGoal,
         turnovers: args.statLine.turnovers,
         causedTurnovers: args.statLine.causedTurnovers,
         groundBalls: args.statLine.groundBalls,
         touches: args.statLine.touches,
         totalPasses: args.statLine.totalPasses,
-        faceoffPct: args.statLine.faceoffPct,
+        faceoffPct: args.statLine.faceoffsWon / args.statLine.faceoffs,
         faceoffsWon: args.statLine.faceoffsWon,
         faceoffsLost: args.statLine.faceoffsLost,
         faceoffs: args.statLine.faceoffs,
-        saa: args.statLine.saa,
+        saa: args.statLine.scoresAgainst / args.statLine.gamesPlayed,
         saves: args.statLine.saves,
-        savePct: args.statLine.savePct,
+        savePct: args.statLine.saves / (args.statLine.saves + args.statLine.scoresAgainst),
         scoresAgainst: args.statLine.scoresAgainst,
         twoPointGoalsAgainst: args.statLine.twoPointGoalsAgainst,
         numPenalties: args.statLine.numPenalties,
@@ -142,7 +135,6 @@ export default {
       // for dealing with real time data updates
       // probably not the place for Web Sockets initial implemntation (better for mobile app query at first)
       // however ,on 'game day' it would probably be appropriate to have websockets here as well
-
       const [statLine, created] = await db.StatLine.findOrCreate({
         where: { 
           statisticsId: statistics.id,
@@ -154,10 +146,8 @@ export default {
       if (!created) {
         await statLine.update(stats)
       }
-      // is this necessary?
-      // only using so i only have to write 1 'hook'
+      // is this necessary? In consideration of future Hooks?
       await statLine.save();
-
 
       const allWeeksStatLines = await db.StatLine.findAll({
         where: { 
@@ -176,10 +166,31 @@ export default {
           [Sequelize.fn('SUM', Sequelize.col('twoPointGoals')), 'totalTwoPointGoals'],
           [Sequelize.fn('SUM', Sequelize.col('assists')), 'totalAssists'],
           [Sequelize.fn('SUM', Sequelize.col('shots')), 'totalShots'],
-          // [Sequelize.fn('SUM', Sequelize.col('shotPct')), 'calcShotPct'],
+          [Sequelize.fn('SUM', Sequelize.col('shotsOnGoal')), 'totalShotsOnGoal'],
+          [Sequelize.fn('SUM', Sequelize.col('twoPointShots')), 'totalTwoPointShots'],
+          [Sequelize.fn('SUM', Sequelize.col('twoPointShotsOnGoal')), 'totalTwoPointShotsOnGoal'],
+          [Sequelize.fn('SUM', Sequelize.col('turnovers')), 'totalTurnovers'],
+          [Sequelize.fn('SUM', Sequelize.col('causedTurnovers')), 'totalCausedTurnovers'],
+          [Sequelize.fn('SUM', Sequelize.col('groundBalls')), 'totalGroundBalls'],
+          [Sequelize.fn('SUM', Sequelize.col('totalPasses')), 'totalPassesTotal'],
+          [Sequelize.fn('SUM', Sequelize.col('faceoffsWon')), 'totalFaceoffsWon'],
+          [Sequelize.fn('SUM', Sequelize.col('faceoffsLost')), 'totalFaceoffsLost'],
+          [Sequelize.fn('SUM', Sequelize.col('faceoffs')), 'totalFaceoffs'],
+          [Sequelize.fn('SUM', Sequelize.col('saves')), 'totalSaves'],
+          [Sequelize.fn('SUM', Sequelize.col('scoresAgainst')), 'totalScoresAgainst'],
+          [Sequelize.fn('SUM', Sequelize.col('twoPointGoalsAgainst')), 'totalTwoPointGoalsAgainst'],
+          [Sequelize.fn('SUM', Sequelize.col('numPenalties')), 'totalNumPenalties'],
+          [Sequelize.fn('SUM', Sequelize.col('pim')), 'totalPim'],
+          [Sequelize.fn('SUM', Sequelize.col('powerPlayShots')), 'totalPowerPlayShots'],
+          [Sequelize.fn('SUM', Sequelize.col('powerPlayShots')), 'totalPowerPlayShots'],
+          [Sequelize.fn('SUM', Sequelize.col('powerPlayGoalsAgainst')), 'totalPowerPlayGoalsAgainst'],
+          [Sequelize.fn('SUM', Sequelize.col('shortHandedGoals')), 'totalShortHandedGoals'],
+          [Sequelize.fn('SUM', Sequelize.col('unassistedGoals')), 'totalUnassistedGoals'],
+          [Sequelize.fn('SUM', Sequelize.col('assistedGoals')), 'totalAssistedGoals'],
         ]
       })
 
+      //Incremental Values
       const totalGamesPlayed = await allWeeksStatLines[0].get().totalGamesPlayed
       const totalPoints = await allWeeksStatLines[0].get().totalPoints
       const totalScoringPoints = await allWeeksStatLines[0].get().totalScoringPoints
@@ -188,71 +199,88 @@ export default {
       const totalTwoPointGoals = await allWeeksStatLines[0].get().totalTwoPointGoals
       const totalAssists = await allWeeksStatLines[0].get().totalAssists
       const totalShots = await allWeeksStatLines[0].get().totalShots
+      const totalShotsOnGoal = await allWeeksStatLines[0].get().totalShotsOnGoal
+      const totalTwoPointShots = await allWeeksStatLines[0].get().totalTwoPointShots
+      const totalTwoPointShotsOnGoal = await allWeeksStatLines[0].get().totalTwoPointShotsOnGoal
+      const totalTurnovers = await allWeeksStatLines[0].get().totalTurnovers
+      const totalCausedTurnovers = await allWeeksStatLines[0].get().totalCausedTurnovers
+      const totalGroundBalls = await allWeeksStatLines[0].get().totalGroundBalls
+      const totalTouches = await allWeeksStatLines[0].get().totalTouches
+      const totalPassesTotal = await allWeeksStatLines[0].get().totalPassesTotal
+      const totalFaceoffsWon = await allWeeksStatLines[0].get().totalFaceoffsWon
+      const totalFaceoffsLost = await allWeeksStatLines[0].get().totalFaceoffsLost
+      const totalFaceoffs = await allWeeksStatLines[0].get().totalFaceoffs
+      const totalSaves = await allWeeksStatLines[0].get().totalSaves
+      const totalScoresAgainst = await allWeeksStatLines[0].get().totalScoresAgainst
+      const totalTwoPointGoalsAgainst = await allWeeksStatLines[0].get().totalTwoPointGoalsAgainst
+      const totalNumPenalties = await allWeeksStatLines[0].get().totalNumPenalties
+      const totalPim = await allWeeksStatLines[0].get().totalPim
+      const totalPowerPlayGoals = await allWeeksStatLines[0].get().totalPowerPlayGoals
+      const totalPowerPlayShots = await allWeeksStatLines[0].get().totalPowerPlayShots
+      const totalPowerPlayGoalsAgainst = await allWeeksStatLines[0].get().totalPowerPlayGoalsAgainst
+      const totalShortHandedGoals = await allWeeksStatLines[0].get().totalShortHandedGoals
+      const totalShortHandedShots = await allWeeksStatLines[0].get().totalShortHandedShots
+      const totalUnassistedGoals = await allWeeksStatLines[0].get().totalUnassistedGoals
+      const totalAssistedGoals = await allWeeksStatLines[0].get().totalAssistedGoals
       
-      const calcShotPct = Number(totalGoals) / Number(totalShots)
-
-      console.log("calcShotPct: ")
-      console.log(calcShotPct)
-      console.log("--------------------")
+      // Calculated Values
+      const calcShotPct = totalGoals / totalShots
+      const calcShotsOnGoalPct = totalShotsOnGoal / totalShots
+      const calcTwoPointShotPct = totalTwoPointGoals / totalTwoPointShots 
+      const calcTwoPointShotsOnGoalPct = totalTwoPointGoals / totalTwoPointShotsOnGoal
+      const calcFaceoffPct = totalFaceoffsWon / totalFaceoffs
+      const calcSaa = totalScoresAgainst / totalGamesPlayed
+      const calcSavePct = totalScoresAgainst / (totalSaves + totalScoresAgainst)
 
       const seasonStats = {
-          playerId: statistics.playerId,
-          statisticsId: statistics.id,
-          season: process.env.CURRENT_SEASON,
-          weekNumber: null,
-          gamesPlayed: totalGamesPlayed,
-          points: totalPoints,
-          scoringPoints: totalScoringPoints,
-          goals: totalGoals,
-          onePointGoals: totalOnePointGoals,
-          twoPointGoals: totalTwoPointGoals,
-          assists: totalAssists,
-          shots: totalShots,
-          shotPct: calcShotPct
-        }
-        // shotsOnGoal:,
-        // shotsOnGoalPct:,
-        // twoPointShots:,
-        // twoPointShotPct:,
-        // twoPointShotsOnGoal:,
-        // twoPointShotsOnGoalPct:,
-        // turnovers:,
-        // causedTurnovers:,
-        // groundBalls:,
-        // touches:,
-        // totalPasses:,
-        // faceoffPct:,
-        // faceoffsWon:,
-        // faceoffsLost:,
-        // faceoffs:,
-        // saa:,
-        // saves:,
-        // savePct:,
-        // scoresAgainst:,
-        // twoPointGoalsAgainst:,
-        // numPenalties:,
-        // pim:,
-        // powerPlayGoals:,
-        // powerPlayShots:,
-        // powerPlayGoalsAgainst:,
-        // shortHandedGoals:,
-        // shortHandedShots:,
-        // unassistedGoals:,
-        // assistedGoals:
+        playerId: statistics.playerId,
+        statisticsId: statistics.id,
+        season: process.env.CURRENT_SEASON,
+        weekNumber: null,
+        gamesPlayed: totalGamesPlayed,
+        points: totalPoints,
+        scoringPoints: totalScoringPoints,
+        goals: totalGoals,
+        onePointGoals: totalOnePointGoals,
+        twoPointGoals: totalTwoPointGoals,
+        assists: totalAssists,
+        shots: totalShots,
+        shotPct: calcShotPct,
+        shotsOnGoal: totalShotsOnGoal,
+        shotsOnGoalPct: calcShotsOnGoalPct,
+        twoPointShots: totalTwoPointShots,
+        twoPointShotPct: calcTwoPointShotPct,
+        twoPointShotsOnGoal: totalTwoPointShotsOnGoal,
+        twoPointShotsOnGoalPct: calcTwoPointShotsOnGoalPct,
+        turnovers: totalTurnovers,
+        causedTurnovers: totalCausedTurnovers,
+        groundBalls: totalGroundBalls,
+        touches: totalTouches,
+        totalPasses: totalPassesTotal,
+        faceoffPct: calcFaceoffPct,
+        faceoffsWon: totalFaceoffsWon,
+        faceoffsLost: totalFaceoffsLost,
+        faceoffs: totalFaceoffs,
+        saa: calcSaa,
+        saves: totalSaves,
+        savePct: calcSavePct,
+        scoresAgainst: totalScoresAgainst,
+        twoPointGoalsAgainst: totalTwoPointGoalsAgainst,
+        numPenalties: totalNumPenalties,
+        pim: totalPim,
+        powerPlayGoals: totalPowerPlayGoals,
+        powerPlayShots: totalPowerPlayShots,
+        powerPlayGoalsAgainst: totalPowerPlayGoalsAgainst,
+        shortHandedGoals: totalShortHandedGoals,
+        shortHandedShots: totalShortHandedShots,
+        unassistedGoals: totalUnassistedGoals,
+        assistedGoals: totalAssistedGoals
+      }
 
-      console.log("totalPoints: " + totalPoints)
-      console.log("totalGoals: " + totalGoals)
-      console.log("totalAssists: " + totalAssists)
-      console.log("-------------")
-      console.log("seasonStats.shotPct: ")
-      console.log(seasonStats.shotPct)
-
-
-      //JH-NOTE: start here - Update Current Season StatLine
-      // do i want to use a Hook in the model?
+      //JH-NOTE: do i want to use a Hook in the model?
       // build here for now, but should probably live on a different file
+      // Upsert?
       const [currentSeasonStatLine, seasonStatLineCreated] = await db.StatLine.findOrCreate({
-      // const currentSeasonStatLine = await db.StatLine.upsert({
         where: { 
           statisticsId: statistics.id,
           weekNumber: null,
@@ -264,6 +292,8 @@ export default {
       if(!seasonStatLineCreated) {
         await currentSeasonStatLine.update(seasonStats)
       }
+
+      await currentSeasonStatLine.save()
 
       return statLine
     

@@ -54,30 +54,17 @@ export default `#graphql
     playerId: Int!
     season: String!
     statLineLastSeason: StatLine
-    statLineLastSeasonId: ID
     statLineCurrentSeason: StatLine
-    statLineCurrentSeasonId: ID
     statLineWeek01: StatLine
-    statLineWeek01Id: ID
     statLineWeek02: StatLine
-    statLineWeek02Id: ID
     statLineWeek03: StatLine
-    statLineWeek03Id: ID
     statLineWeek04: StatLine
-    statLineWeek04Id: ID
     statLineWeek05: StatLine
-    statLineWeek05Id: ID
     statLineWeek06: StatLine
-    statLineWeek06Id: ID
     statLineWeek07: StatLine
-    statLineWeek07Id: ID
     statLineWeek08: StatLine
-    statLineWeek08Id: ID
     statLineWeek09: StatLine
-    statLineWeek09Id: ID
     statLineWeek10: StatLine
-    statLineWeek10Id: ID
-    lastSeason: StatLine
   }
 
   type ProjectedStatistics {
@@ -116,25 +103,18 @@ export default `#graphql
     twoPointGoals: Int
     assists: Int
     shots: Int
-    shotPct: Float
     shotsOnGoal: Int
-    shotsOnGoalPct: Float
     twoPointShots: Int
-    twoPointShotPct: Float
     twoPointShotsOnGoal: Int
-    twoPointShotsOnGoalPct: Float
     turnovers: Int
     causedTurnovers: Int
     groundBalls: Int
     touches: Int
     totalPasses: Int
-    faceoffPct: Float
     faceoffsWon: Int
     faceoffsLost: Int
     faceoffs: Int
-    saa: Float
     saves: Int
-    savePct: Float
     scoresAgainst: Int
     twoPointGoalsAgainst: Int
     numPenalties: Int
