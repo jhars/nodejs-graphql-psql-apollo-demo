@@ -80,6 +80,7 @@ module.exports = (sequelize, DataTypes) => {
 
     }
   }
+
   Statistics.init({
     id: {
       allowNull: false,
@@ -87,7 +88,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.UUID,
       defaultValue: sequelize.literal('uuid_generate_v4()')
     },
-    playerId: DataTypes.INTEGER,
+    playerId: {
+      allowNull: false,
+      type: DataTypes.INTEGER,
+      unique: true
+    },
     season: DataTypes.STRING
   }, {
     sequelize,

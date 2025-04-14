@@ -1,3 +1,4 @@
+import { Op, Sequelize } from 'sequelize';
 export default {
     addLeague: async (parent, args, { db }, info) => {
         try {
@@ -122,6 +123,10 @@ export default {
                 unassistedGoals: args.statLine.unassistedGoals,
                 assistedGoals: args.statLine.assistedGoals
             };
+            // UPSERT may be a more appropriate command in the future
+            // for dealing with real time data updates
+            // probably not the place for Web Sockets initial implemntation (better for mobile app query at first)
+            // however ,on 'game day' it would probably be appropriate to have websockets here as well
             const [statLine, created] = await db.StatLine.findOrCreate({
                 where: {
                     statisticsId: statistics.id,
@@ -130,18 +135,108 @@ export default {
                 defaults: stats
             });
             if (!created) {
-                statLine.update(stats);
+                await statLine.update(stats);
             }
             // is this necessary?
             // only using so i only have to write 1 'hook'
             await statLine.save();
+            const allWeeksStatLines = await db.StatLine.findAll({
+                where: {
+                    statisticsId: statistics.id,
+                    weekNumber: {
+                        [Op.not]: null
+                    },
+                    season: process.env.CURRENT_SEASON
+                },
+                attributes: [
+                    [Sequelize.fn('SUM', Sequelize.col('gamesPlayed')), 'totalGamesPlayed'],
+                    [Sequelize.fn('SUM', Sequelize.col('points')), 'totalPoints'],
+                    [Sequelize.fn('SUM', Sequelize.col('scoringPoints')), 'totalScoringPoints'],
+                    [Sequelize.fn('SUM', Sequelize.col('goals')), 'totalGoals'],
+                    [Sequelize.fn('SUM', Sequelize.col('onePointGoals')), 'totalOnePointGoals'],
+                    [Sequelize.fn('SUM', Sequelize.col('twoPointGoals')), 'totalTwoPointGoals'],
+                    [Sequelize.fn('SUM', Sequelize.col('assists')), 'totalAssists'],
+                    [Sequelize.fn('SUM', Sequelize.col('shots')), 'totalShots'],
+                    // [Sequelize.fn('SUM', Sequelize.col('shotPct')), 'calcShotPct'],
+                ]
+            });
+            const totalGamesPlayed = await allWeeksStatLines[0].get().totalGamesPlayed;
+            const totalPoints = await allWeeksStatLines[0].get().totalPoints;
+            const totalScoringPoints = await allWeeksStatLines[0].get().totalScoringPoints;
+            const totalGoals = await allWeeksStatLines[0].get().totalGoals;
+            const totalOnePointGoals = await allWeeksStatLines[0].get().totalOnePointGoals;
+            const totalTwoPointGoals = await allWeeksStatLines[0].get().totalTwoPointGoals;
+            const totalAssists = await allWeeksStatLines[0].get().totalAssists;
+            const totalShots = await allWeeksStatLines[0].get().totalShots;
+            const calcShotPct = Number(totalGoals) / Number(totalShots);
+            console.log("calcShotPct: ");
+            console.log(calcShotPct);
+            console.log("--------------------");
+            const seasonStats = {
+                playerId: statistics.playerId,
+                statisticsId: statistics.id,
+                season: process.env.CURRENT_SEASON,
+                weekNumber: null,
+                gamesPlayed: totalGamesPlayed,
+                points: totalPoints,
+                scoringPoints: totalScoringPoints,
+                goals: totalGoals,
+                onePointGoals: totalOnePointGoals,
+                twoPointGoals: totalTwoPointGoals,
+                assists: totalAssists,
+                shots: totalShots,
+                shotPct: calcShotPct
+            };
+            // shotsOnGoal:,
+            // shotsOnGoalPct:,
+            // twoPointShots:,
+            // twoPointShotPct:,
+            // twoPointShotsOnGoal:,
+            // twoPointShotsOnGoalPct:,
+            // turnovers:,
+            // causedTurnovers:,
+            // groundBalls:,
+            // touches:,
+            // totalPasses:,
+            // faceoffPct:,
+            // faceoffsWon:,
+            // faceoffsLost:,
+            // faceoffs:,
+            // saa:,
+            // saves:,
+            // savePct:,
+            // scoresAgainst:,
+            // twoPointGoalsAgainst:,
+            // numPenalties:,
+            // pim:,
+            // powerPlayGoals:,
+            // powerPlayShots:,
+            // powerPlayGoalsAgainst:,
+            // shortHandedGoals:,
+            // shortHandedShots:,
+            // unassistedGoals:,
+            // assistedGoals:
+            console.log("totalPoints: " + totalPoints);
+            console.log("totalGoals: " + totalGoals);
+            console.log("totalAssists: " + totalAssists);
+            console.log("-------------");
+            console.log("seasonStats.shotPct: ");
+            console.log(seasonStats.shotPct);
             //JH-NOTE: start here - Update Current Season StatLine
             // do i want to use a Hook in the model?
-            // const currentSeasonStatLine = db.findOne({
-            //   where: {
-            //     statisticsId: statistics.id,
-            //   }
-            // })
+            // build here for now, but should probably live on a different file
+            const [currentSeasonStatLine, seasonStatLineCreated] = await db.StatLine.findOrCreate({
+                // const currentSeasonStatLine = await db.StatLine.upsert({
+                where: {
+                    statisticsId: statistics.id,
+                    weekNumber: null,
+                    season: process.env.CURRENT_SEASON
+                },
+                defaults: seasonStats
+            });
+            if (!seasonStatLineCreated) {
+                await currentSeasonStatLine.update(seasonStats);
+            }
             return statLine;
         }
         catch (error) {
