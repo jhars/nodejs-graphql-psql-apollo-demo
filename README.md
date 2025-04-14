@@ -1,10 +1,6 @@
-# GraphQL, Apollo, Sequelize, Redis, Typescript Demo
+# Fantasy Lacrosse API
 
-You can send GraphQL requests (via Postman GraphQL requests) to a Heroku test server the code in this repo at the following URL:
-
-```
-https://lax-api-04-15d23fe6df01.herokuapp.com/graphql
-```
+### Tech Stack: GraphQL, Apollo, Sequelize, Redis, Typescript Demo
 
 In order to run locally, first add the following `.env` file to your projet root:
 
@@ -24,6 +20,8 @@ DATABASE_URL="Reserved for Production"
 REDIS_CONNECTION_URL="redis://root:XfPH3f2$v8L4H$N@redis-18317.c246.us-east-1-4.ec2.redns.redis-cloud.com:18317"
 ```
 
+Run `npm install`
+
 Then create the database and run migrations:
 
 ```
@@ -41,60 +39,6 @@ npm run watch
 
 ```
 npm run dev
-```
-
-## Sample Queries & Mutations
-
-You can run the following requests on an updated version of postman using the "GraphQL" Request type:
-
-```
-mutation Mutation($title: String) {
-  addLeague(title: $title) {
-    title
-  }
-}
-
-Variables:
-{
-  "title": "Beta League"
-}
-
-```
-
-```
-mutation AddTeam($name: String, $leagueId: Int) {
-  addTeam(name: $name, leagueId: $leagueId) {
-    name
-  }
-}
-
-Variables:
-{
-  "name": "Bananas",
-  "leagueId": 1
-}
-```
-
-```
-query Leagues {
-  leagues {
-    title
-    teams {
-      name
-    }
-  }
-}
-```
-
-```
-query Teams {
-  teams {
-    name
-    league {
-      title
-    }
-  }
-}
 ```
 
 ## How to run GraphQL Queries on Postman

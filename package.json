@@ -14,7 +14,9 @@
   "extensionless": {
     "lookFor": [
       "js",
-      "mjs"
+      "mjs",
+      "mts",
+      "ts"
     ]
   },
   "dependencies": {
