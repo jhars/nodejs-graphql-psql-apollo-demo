@@ -4,11 +4,11 @@ module.exports = (sequelize, DataTypes) => {
   class Team extends Model {
     static associate(models) {
       //JH-NOTE: association seems to stil work even if commented out...
-      // this.belongsTo(models.League, {
-      //   foreignKey: 'leagueId',
-      //   allowNull: false,
-      //   as: 'league'
-      // })
+      this.belongsTo(models.League, {
+        foreignKey: 'leagueId',
+        allowNull: false,
+        as: 'league'
+      })
 
       this.hasOne(models.Roster, {
         foreignKey: 'teamId',
