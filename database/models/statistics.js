@@ -7,6 +7,11 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
 
+      // this.belongsTo(models.Player, {
+      //   foreignKey: 'playerId',
+      //   as: 'statistics'
+      // })
+
       this.hasOne(models.StatLine, {
         foreignKey: 'statisticsId',
         as: 'statLineWeek01',

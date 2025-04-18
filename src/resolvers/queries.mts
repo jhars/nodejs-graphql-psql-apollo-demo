@@ -1,4 +1,5 @@
 import { cacheControlFromInfo } from '@apollo/cache-control-types';
+import { statLineData } from '../helpers/queryHelpers'
 
 export default {
   leagues: async(root, args, {db}, info) => {
@@ -45,6 +46,53 @@ export default {
         {
           model: db.Roster,
           as: 'roster',
+          include: [
+            {
+              model: db.Player,
+              as: 'goalie',
+              required: false,
+            },
+            {
+              model: db.Player,
+              as: 'lsm',
+              required: false,
+            },
+            {
+              model: db.Player,
+              as: 'fo',
+              required: false,
+            },
+            {
+              model: db.Player,
+              as: 'attack1',
+              required: false,
+            },
+            {
+              model: db.Player,
+              as: 'attack2',
+              required: false,
+            },
+            {
+              model: db.Player,
+              as: 'midfield1',
+              required: false,
+            },
+            {
+              model: db.Player,
+              as: 'midfield2',
+              required: false,
+            },
+            {
+              model: db.Player,
+              as: 'defense1',
+              required: false,
+            },
+            {
+              model: db.Player,
+              as: 'defense2',
+              required: false,
+            },
+          ]
         },
       ],
       where
@@ -54,7 +102,134 @@ export default {
     }
   },
 
+  roster: async(root, args, {db}, info) => {
+    try {
+      
+      // const where = 
+      
+      const rosterPlayerIDs = await db.Roster.findOne({ where: { teamId: args.teamId } });
+      console.log("rosterPlayerIDs: ")
+      console.log(rosterPlayerIDs)
+      console.log("=================")
 
+      const goalie = await db.Player.findOne({
+        include: [
+          {
+            model: db.Statistics,
+            as: 'statistics',
+            include: statLineData(db)
+          }
+        ],
+        where: {id: rosterPlayerIDs.goalieID}
+      })
+
+      const defense1 = await db.Player.findOne({
+        where: {id: rosterPlayerIDs.defense1ID},
+        include: [
+          {
+            model: db.Statistics,
+            as: 'statistics',
+            include: statLineData(db)
+          }
+        ]
+      })
+
+      const defense2 = await db.Player.findOne({
+        where: {id: rosterPlayerIDs.defense2ID},
+        include: [
+          {
+            model: db.Statistics,
+            as: 'statistics',
+            include: statLineData(db)
+          }
+        ]
+      })
+
+      const lsm = await db.Player.findOne({
+        where: {id: rosterPlayerIDs.lsmID},
+        include: [
+          {
+            model: db.Statistics,
+            as: 'statistics',
+            include: statLineData(db)
+          }
+        ]
+      })
+
+      const fo = await db.Player.findOne({
+        where: {id: rosterPlayerIDs.foID},
+        include: [
+          {
+            model: db.Statistics,
+            as: 'statistics',
+            include: statLineData(db)
+          }
+        ]
+      })
+
+      const midfield1 = await db.Player.findOne({
+        where: {id: rosterPlayerIDs.midfield1ID},
+        include: [
+          {
+            model: db.Statistics,
+            as: 'statistics',
+            include: statLineData(db)
+          }
+        ]
+      })
+
+      const midfield2 = await db.Player.findOne({
+        where: {id: rosterPlayerIDs.midfield2ID},
+        include: [
+          {
+            model: db.Statistics,
+            as: 'statistics',
+            include: statLineData(db)
+          }
+        ]
+      })
+
+      const attack1 = await db.Player.findOne({
+        where: {id: rosterPlayerIDs.attack1ID},
+        include: [
+          {
+            model: db.Statistics,
+            as: 'statistics',
+            include: statLineData(db)
+          }
+        ]
+      })
+
+      const attack2 = await db.Player.findOne({
+        where: {id: rosterPlayerIDs.attack2ID},
+        include: [
+          {
+            model: db.Statistics,
+            as: 'statistics',
+            include: statLineData(db)
+          }
+        ]
+      })
+
+      const roster = {
+        teamId: rosterPlayerIDs.teamId,
+        goalie: goalie,
+        defense1: defense1,
+        defense2: defense2,
+        lsm: lsm,
+        fo: fo,
+        midfield1: midfield1,
+        midfield2: midfield2,
+        attack1: attack1,
+        attack2: attack2
+      }
+
+      return roster
+
+    } catch(error) {
+      console.error('Unable to connect to the database:', error);
+    }
+  },
 
   players: async(root, args, {db}, info) => {
     try {
@@ -66,93 +241,7 @@ export default {
         {
             model: db.Statistics,
             as: 'statistics',
-            include: [
-              {
-                model: db.StatLine,
-                as: 'statLineWeek01',
-                where: {weekNumber: 1},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineWeek02',
-                where: {weekNumber: 2},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineWeek03',
-                where: {weekNumber: 3},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineWeek04',
-                where: {weekNumber: 4},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineWeek05',
-                where: {weekNumber: 5},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineWeek06',
-                where: {weekNumber: 6},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineWeek07',
-                where: {weekNumber: 7},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineWeek08',
-                where: {weekNumber: 8},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineWeek09',
-                where: {weekNumber: 9},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineWeek10',
-                where: {weekNumber: 10},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineCurrentSeason',
-                where: {season: "2025", weekNumber: null},
-                allowNull: true,
-                required: false,
-              },
-              {
-                model: db.StatLine,
-                as: 'statLineLastSeason',
-                where: {season: "2024", weekNumber: null},
-                allowNull: true,
-                required: false,
-              },
-
-            ]
+            include: statLineData(db)
         }
       ] //top level include
       });

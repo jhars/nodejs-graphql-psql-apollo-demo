@@ -54,13 +54,61 @@ export default {
                     }
                 ]
             });
-            roster.setDataValue(args.rosterSpot.toLowerCase(), args.playerId);
+            roster.setDataValue(`${args.rosterSpot.toLowerCase()}ID`, args.playerId);
+            // roster.setDataValue(args.rosterSpot.toLowerCase(), args.playerId)
             await roster.save();
             return await db.Team.findOne({
                 include: [
                     {
                         model: db.Roster,
-                        as: 'roster'
+                        as: 'roster',
+                        include: [
+                            {
+                                model: db.Player,
+                                as: 'goalie',
+                                required: false,
+                            },
+                            {
+                                model: db.Player,
+                                as: 'lsm',
+                                required: false,
+                            },
+                            {
+                                model: db.Player,
+                                as: 'fo',
+                                required: false,
+                            },
+                            {
+                                model: db.Player,
+                                as: 'attack1',
+                                required: false,
+                            },
+                            {
+                                model: db.Player,
+                                as: 'attack2',
+                                required: false,
+                            },
+                            {
+                                model: db.Player,
+                                as: 'midfield1',
+                                required: false,
+                            },
+                            {
+                                model: db.Player,
+                                as: 'midfield2',
+                                required: false,
+                            },
+                            {
+                                model: db.Player,
+                                as: 'defense1',
+                                required: false,
+                            },
+                            {
+                                model: db.Player,
+                                as: 'defense2',
+                                required: false,
+                            },
+                        ]
                     }
                 ],
                 where: args.teamId

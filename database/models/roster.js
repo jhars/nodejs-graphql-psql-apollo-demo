@@ -13,12 +13,67 @@ module.exports = (sequelize, DataTypes) => {
      */
     
     static associate(models) {
-      // seems like nonsense, only modeling aftert league/team relationship
+
       // this.belongsTo(models.Team, {
       //   foreignKey: 'teamId',
       //   allowNull: false,
       //   as: 'team'
       // })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'goalieID',
+        as: 'goalie',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'lsmID',
+        as: 'lsm',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'foID',
+        as: 'fo',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'attack1ID',
+        as: 'attack1',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'attack2ID',
+        as: 'attack2',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'midfield1ID',
+        as: 'midfield1',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'midfield2ID',
+        as: 'midfield2',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'defense1ID',
+        as: 'defense1',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'defense2ID',
+        as: 'defense2',
+        allowNull: true,
+      })
+
       this.belongsTo(models.Team, {
         foreignKey: 'teamId',
         allowNull: false,
@@ -35,19 +90,19 @@ module.exports = (sequelize, DataTypes) => {
       defaultValue: sequelize.literal('uuid_generate_v4()')
     },
     teamId: DataTypes.INTEGER,
-    goalie: DataTypes.INTEGER,
-    defense1: DataTypes.INTEGER,
-    defense2: DataTypes.INTEGER,
-    midfield1: DataTypes.INTEGER,
-    midfield2: DataTypes.INTEGER,
-    fo: DataTypes.INTEGER,
-    lsm: DataTypes.INTEGER,
-    attack1: DataTypes.INTEGER,
-    attack2: DataTypes.INTEGER,
-    bench1: DataTypes.INTEGER,
-    bench2: DataTypes.INTEGER,
-    bench3: DataTypes.INTEGER,
-    bench4: DataTypes.INTEGER
+    goalieID: DataTypes.INTEGER,
+    defense1ID: DataTypes.INTEGER,
+    defense2ID: DataTypes.INTEGER,
+    midfield1ID: DataTypes.INTEGER,
+    midfield2ID: DataTypes.INTEGER,
+    foID: DataTypes.INTEGER,
+    lsmID: DataTypes.INTEGER,
+    attack1ID: DataTypes.INTEGER,
+    attack2ID: DataTypes.INTEGER,
+    bench1ID: DataTypes.INTEGER,
+    bench2ID: DataTypes.INTEGER,
+    bench3ID: DataTypes.INTEGER,
+    bench4ID: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Roster',

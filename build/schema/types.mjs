@@ -41,6 +41,7 @@ export default `#graphql
   }
 
   type Player {
+    id: ID!
     firstName: String!
     lastName: String!
     position: String!
@@ -84,15 +85,29 @@ export default `#graphql
   type Roster {
     id: ID
     teamId: Int!
-    goalie: Int
-    defense1: Int
-    defense2: Int
-    midfield1: Int
-    midfield2: Int
-    fo: Int
-    lsm: Int
-    attack1: Int
-    attack2: Int
+    goalie: Player
+    fo: Player
+    lsm: Player
+    attack1: Player
+    attack2: Player
+    midfield1: Player
+    midfield2: Player
+    defense1: Player
+    defense2: Player
+  }
+
+  type RosterIDs {
+    id: ID
+    teamId: Int!
+    goalieID: Int
+    defense1ID: Int
+    defense2ID: Int
+    midfield1ID: Int
+    midfield2ID: Int
+    foID: Int
+    lsmID: Int
+    attack1ID: Int
+    attack2ID: Int
   }
 
   input StatLineInput {

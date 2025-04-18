@@ -1,5 +1,5 @@
 // JH-NOTE: need to dewtermine bet prqcitce for these type of helper methods...
-// >>> ok to solve when you need this type of code to be re-usable like add/drop players
+// 	>>> ok to solve when you need this type of code to be re-usable like add/drop players
 export {};
 // import types from "../schema/types";
 // const setRosterPosition = (position: RosterSpot) => {
