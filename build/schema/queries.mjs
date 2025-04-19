@@ -3,7 +3,7 @@ export default `#graphql
     leagues: [League!],
     teams(teamsId: Int, leagueId: Int): [Team!],
     roster(teamId: Int): Roster!,
-    players(playerId: Int, teamsId: Int): [Player!]
+    players(playerId: Int, orderBy: PlayerOrder): [Player!]
   }
 `;
 // follow pattern like the following for players:

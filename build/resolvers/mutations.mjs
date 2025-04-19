@@ -27,7 +27,6 @@ export default {
                 updatedAt: new Date()
             });
             //not sure we need where clause since leagueId is required (non-nullable) for this mutation
-            // include not working for 'league'...
             const where = args.leagueId ? { id: args.leagueId } : {};
             return await db.Team.findAll({
                 include: [

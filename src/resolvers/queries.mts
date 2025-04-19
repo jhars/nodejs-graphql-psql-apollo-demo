@@ -236,14 +236,19 @@ export default {
       // see above JH-NOTE for why I may want to use this
       // const where = args.playerId ? { id: args.playerId } : args.teamsId ? { teamsId: args.teamsId } : {};
       // const players = await db.Player.findAll({where});
+      console.log("args.orderBy: ")
+      console.log(args.orderBy)
+      console.log(JSON.parse)
+      console.log("==============")
       const players = await db.Player.findAll({
+      order: [[args.orderBy.field, args.orderBy.order]],
       include: [
         {
             model: db.Statistics,
             as: 'statistics',
             include: statLineData(db)
         }
-      ] //top level include
+      ],
       });
       
       return players

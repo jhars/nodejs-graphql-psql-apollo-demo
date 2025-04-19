@@ -1,5 +1,5 @@
 export default `#graphql
-
+  
   enum Position {
     G
     D
@@ -8,6 +8,21 @@ export default `#graphql
     SSDM
     M
     A
+  }
+
+  enum SortingOrder {
+    ASC
+    DESC
+  }
+
+  input PlayerOrder {
+    order: SortingOrder!
+    field: PlayerSortField!
+  }
+
+  enum PlayerSortField {
+    position
+    lastName
   }
 
   enum RosterSpot {
@@ -66,20 +81,6 @@ export default `#graphql
     statLineWeek08: StatLine
     statLineWeek09: StatLine
     statLineWeek10: StatLine
-  }
-
-  type ProjectedStatistics {
-    currentSeason: StatLineProjected
-    week1: StatLineProjected
-    week2: StatLineProjected
-    week3: StatLineProjected
-    week4: StatLineProjected
-    week5: StatLineProjected
-    week6: StatLineProjected
-    week7: StatLineProjected
-    week8: StatLineProjected
-    week9: StatLineProjected
-    week10: StatLineProjected
   }
 
   type Roster {
