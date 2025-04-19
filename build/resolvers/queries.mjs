@@ -216,17 +216,19 @@ export default {
             // see above JH-NOTE for why I may want to use this
             // const where = args.playerId ? { id: args.playerId } : args.teamsId ? { teamsId: args.teamsId } : {};
             // const players = await db.Player.findAll({where});
-            console.log("args.orderBy: ");
-            console.log(args.orderBy);
-            console.log(JSON.parse);
-            console.log("==============");
+            const profileSort = args.orderBy.field == "points" ? null : [[args.orderBy.field, args.orderBy.order]];
+            //JH-NOTE: start here
+            //JH-NOTE: works, but this is sloppy, consider refactor
+            const statSort = args.orderBy.field == "points" ? [
+                [{ model: db.Statistics, as: 'statistics' }, { model: db.StatLine, as: 'statLineLastSeason' }, args.orderBy.field, args.orderBy.order]
+            ] : null;
             const players = await db.Player.findAll({
-                order: [[args.orderBy.field, args.orderBy.order]],
+                order: profileSort || statSort,
                 include: [
                     {
                         model: db.Statistics,
                         as: 'statistics',
-                        include: statLineData(db)
+                        include: statLineData(db, statSort)
                     }
                 ],
             });

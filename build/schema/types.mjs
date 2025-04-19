@@ -23,6 +23,7 @@ export default `#graphql
   enum PlayerSortField {
     position
     lastName
+    points
   }
 
   enum RosterSpot {

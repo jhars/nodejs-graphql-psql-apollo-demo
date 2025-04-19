@@ -1,4 +1,4 @@
-export const statLineData = (db) => {
+export const statLineData = (db, statSort) => {
     return [
         {
             model: db.StatLine,
