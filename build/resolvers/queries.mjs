@@ -23,7 +23,6 @@ export default {
     },
     teams: async (root, args, { db }, info) => {
         try {
-            // const where = args.leagueId ? { leagueId: args.leagueId } : {};
             //JH-NOTE: unreadable, and may not work, but...
             // should handle case if given both parameters
             // uses teamsId if its there, (would not use leagueId)
@@ -98,11 +97,7 @@ export default {
     },
     roster: async (root, args, { db }, info) => {
         try {
-            // const where = 
             const rosterPlayerIDs = await db.Roster.findOne({ where: { teamId: args.teamId } });
-            console.log("rosterPlayerIDs: ");
-            console.log(rosterPlayerIDs);
-            console.log("=================");
             const goalie = await db.Player.findOne({
                 include: [
                     {

@@ -6,5 +6,3 @@ export default `#graphql
     players(playerId: Int, orderBy: PlayerOrder): [Player!]
   }
 `;
-// follow pattern like the following for players:
-// players(teamId: Int): [Player!],

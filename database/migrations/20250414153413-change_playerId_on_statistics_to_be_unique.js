@@ -12,3 +12,5 @@ module.exports = {
     queryInterface.removeIndex('Statistics', ['playerId'])
   }
 };
+
+//JH-NOTE: these should have await, could cause issues on production environment...

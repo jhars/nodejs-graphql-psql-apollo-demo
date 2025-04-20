@@ -1,3 +1,4 @@
+import dotenv from 'dotenv'
 export const statLineData = (db, statSort) => {
 	return [
       {
@@ -73,21 +74,16 @@ export const statLineData = (db, statSort) => {
       {
         model: db.StatLine,
         as: 'statLineCurrentSeason',
-        where: {season: "2025", weekNumber: null},
+        where: {season: process.env.CURRENT_SEASON, weekNumber: null},
         allowNull: true,
         required: false,
       },
       {
         model: db.StatLine,
         as: 'statLineLastSeason',
-        where: {season: "2024", weekNumber: null},
+        where: {season: process.env.LAST_SEASON, weekNumber: null},
         allowNull: true,
         required: false,
       },
     ]
 }
-
-
-// export default {
-//   statLineData: statLineData
-// }; 

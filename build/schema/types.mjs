@@ -51,6 +51,7 @@ export default `#graphql
   type Team @cacheControl(maxAge: 0) {
     id: ID
     name: String!
+    ownerId: ID
     league: League!
     leagueId: Int!
     roster: Roster

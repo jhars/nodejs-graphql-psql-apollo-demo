@@ -18,6 +18,7 @@ export default {
             const team = await db.Team.create({
                 name: args.name,
                 leagueId: args.leagueId,
+                ownerId: args.ownerId,
                 createdAt: new Date(),
                 updatedAt: new Date()
             });
