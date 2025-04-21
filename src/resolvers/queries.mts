@@ -29,12 +29,16 @@ export default {
   teams: async(root, args, {db}, info) => {
     try {
       //JH-NOTE: unreadable, and may not work, but...
-      // should handle case if given both parameters
+      // should handle case if given all 3 parameters
+      // uses ownerId if its there (would not use teamsId or leagueId)
       // uses teamsId if its there, (would not use leagueId)
-      // then checks for leagueId, and should return teams in league succesfully
-      // ignores sleague Id if provided a teamId
+      // then checks for leagueId
+      // ignores league Id if provided a teamId and ignores teamsId if proivided an ownerId
       // is this good graphql form?
-      const where = args.teamsId ? { id: args.teamsId } : args.leagueId ? { leagueId: args.leagueId } : {};
+      const where = args.ownerId ? {ownerId: args.ownerId}
+        : args.teamsId ? { id: args.teamsId }
+        : args.leagueId ? { leagueId: args.leagueId } : {};
+
       
       return await db.Team.findAll({
       include: [

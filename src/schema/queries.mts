@@ -3,7 +3,7 @@ import types from "./types";
 export default `#graphql
   type Query {
     leagues: [League!],
-    teams(teamsId: Int, leagueId: Int): [Team!],
+    teams(ownerId: ID, teamsId: Int, leagueId: Int): [Team!],
     roster(teamId: Int): Roster!,
     players(playerId: Int, orderBy: PlayerOrder): [Player!]
   }
