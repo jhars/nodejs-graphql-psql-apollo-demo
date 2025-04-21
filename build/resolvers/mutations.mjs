@@ -15,6 +15,19 @@ export default {
     },
     addTeam: async (parent, args, { db }, info) => {
         try {
+            const userAlreadyOwnsTeamInLeague = await db.Team.findOne({
+                where: {
+                    [Op.and]: [
+                        { leagueId: args.leagueId },
+                        { ownerId: args.ownerId }
+                    ]
+                }
+            });
+            console.log("userAlreadyOwnsTeamInLeague");
+            console.log(userAlreadyOwnsTeamInLeague);
+            if (userAlreadyOwnsTeamInLeague) {
+                throw new Error('User already owns team for this league');
+            }
             const team = await db.Team.create({
                 name: args.name,
                 leagueId: args.leagueId,
