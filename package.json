@@ -1,11 +1,11 @@
 {
   "name": "laxfantasyapi-04",
   "version": "1.0.0",
-  "main": "build/index.mjs",
+  "main": "build/app.mjs",
   "scripts": {
     "watch": "tsc -p tsconfig.json --watch",
-    "dev": "nodemon --import=extensionless/register build/index.mjs",
-    "start": "node --import=extensionless/register build/index.mjs"
+    "dev": "nodemon --import=extensionless/register build/app.mjs",
+    "start": "node --import=extensionless/register build/app.mjs"
   },
   "keywords": [],
   "author": "",

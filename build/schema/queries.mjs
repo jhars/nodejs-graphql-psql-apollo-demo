@@ -1,8 +1,0 @@
-export default `#graphql
-  type Query {
-    leagues: [League!],
-    teams(ownerId: ID, teamsId: Int, leagueId: Int): [Team!],
-    roster(teamId: Int): Roster!,
-    players(playerId: Int, orderBy: PlayerOrder): [Player!]
-  }
-`;
