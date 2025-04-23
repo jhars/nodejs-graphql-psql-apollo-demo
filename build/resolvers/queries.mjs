@@ -1,4 +1,5 @@
-import { statLineData } from '../helpers/queryHelpers';
+import { statLineData } from '../helpers/statLineHelpers';
+import { rosterData } from '../helpers/rosterHelpers';
 export default {
     leagues: async (root, args, { db }, info) => {
         try {
@@ -42,53 +43,7 @@ export default {
                     {
                         model: db.Roster,
                         as: 'roster',
-                        include: [
-                            {
-                                model: db.Player,
-                                as: 'goalie',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'lsm',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'fo',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'attack1',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'attack2',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'midfield1',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'midfield2',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'defense1',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'defense2',
-                                required: false,
-                            },
-                        ]
+                        include: rosterData(db)
                     },
                 ],
                 where
@@ -133,6 +88,16 @@ export default {
             });
             const lsm = await db.Player.findOne({
                 where: { id: rosterPlayerIDs.lsmID },
+                include: [
+                    {
+                        model: db.Statistics,
+                        as: 'statistics',
+                        include: statLineData(db)
+                    }
+                ]
+            });
+            const ssdm = await db.Player.findOne({
+                where: { id: rosterPlayerIDs.ssdmID },
                 include: [
                     {
                         model: db.Statistics,
@@ -197,6 +162,7 @@ export default {
                 defense1: defense1,
                 defense2: defense2,
                 lsm: lsm,
+                ssdm: ssdm,
                 fo: fo,
                 midfield1: midfield1,
                 midfield2: midfield2,
@@ -226,7 +192,7 @@ export default {
                     {
                         model: db.Statistics,
                         as: 'statistics',
-                        include: statLineData(db, statSort)
+                        include: statLineData(db)
                     }
                 ],
             });

@@ -4,8 +4,8 @@ export default `#graphql
     G
     D
     LSM
-    FO
     SSDM
+    FO
     M
     A
   }
@@ -30,8 +30,9 @@ export default `#graphql
     GOALIE
     DEFENSE1
     DEFENSE2
-    FO
     LSM
+    SSDM
+    FO
     MIDFIELD1
     MIDFIELD2
     ATTACK1
@@ -89,14 +90,15 @@ export default `#graphql
     id: ID
     teamId: Int!
     goalie: Player
-    fo: Player
+    defense1: Player
+    defense2: Player    
     lsm: Player
-    attack1: Player
-    attack2: Player
+    ssdm: Player
+    fo: Player
     midfield1: Player
     midfield2: Player
-    defense1: Player
-    defense2: Player
+    attack1: Player
+    attack2: Player
   }
 
   type RosterIDs {
@@ -105,10 +107,11 @@ export default `#graphql
     goalieID: Int
     defense1ID: Int
     defense2ID: Int
+    lsmID: Int
+    ssdmID: Int
+    foID: Int
     midfield1ID: Int
     midfield2ID: Int
-    foID: Int
-    lsmID: Int
     attack1ID: Int
     attack2ID: Int
   }

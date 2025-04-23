@@ -14,15 +14,27 @@ module.exports = (sequelize, DataTypes) => {
     
     static associate(models) {
 
-      // this.belongsTo(models.Team, {
-      //   foreignKey: 'teamId',
-      //   allowNull: false,
-      //   as: 'team'
-      // })
+      this.belongsTo(models.Team, {
+        foreignKey: 'teamId',
+        allowNull: false,
+        as: 'team'
+      })
 
       this.belongsTo(models.Player, {
         foreignKey: 'goalieID',
         as: 'goalie',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'defense1ID',
+        as: 'defense1',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
+        foreignKey: 'defense2ID',
+        as: 'defense2',
         allowNull: true,
       })
 
@@ -33,20 +45,14 @@ module.exports = (sequelize, DataTypes) => {
       })
 
       this.belongsTo(models.Player, {
+        foreignKey: 'ssdmID',
+        as: 'ssdm',
+        allowNull: true,
+      })
+
+      this.belongsTo(models.Player, {
         foreignKey: 'foID',
         as: 'fo',
-        allowNull: true,
-      })
-
-      this.belongsTo(models.Player, {
-        foreignKey: 'attack1ID',
-        as: 'attack1',
-        allowNull: true,
-      })
-
-      this.belongsTo(models.Player, {
-        foreignKey: 'attack2ID',
-        as: 'attack2',
         allowNull: true,
       })
 
@@ -63,22 +69,17 @@ module.exports = (sequelize, DataTypes) => {
       })
 
       this.belongsTo(models.Player, {
-        foreignKey: 'defense1ID',
-        as: 'defense1',
+        foreignKey: 'attack1ID',
+        as: 'attack1',
         allowNull: true,
       })
 
       this.belongsTo(models.Player, {
-        foreignKey: 'defense2ID',
-        as: 'defense2',
+        foreignKey: 'attack2ID',
+        as: 'attack2',
         allowNull: true,
       })
 
-      this.belongsTo(models.Team, {
-        foreignKey: 'teamId',
-        allowNull: false,
-        as: 'team'
-      })
     }
   }
   //this works for generating roster

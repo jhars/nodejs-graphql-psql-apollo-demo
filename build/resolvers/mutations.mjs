@@ -1,20 +1,25 @@
 import { Op, Sequelize } from 'sequelize';
+import { rosterData } from '../helpers/rosterHelpers';
 export default {
     addLeague: async (parent, args, { db }, info) => {
         try {
-            await db.League.create({
-                title: args.title,
-                createdAt: new Date(),
-                updatedAt: new Date()
+            return await db.sequelize.transaction(async () => {
+                await db.League.create({
+                    title: args.title,
+                    createdAt: new Date(),
+                    updatedAt: new Date()
+                });
+                return await db.League.findAll();
             });
-            return await db.League.findAll();
         }
         catch (error) {
             console.error('Unable to connect to the database:', error);
+            return error;
         }
     },
     addTeam: async (parent, args, { db }, info) => {
         try {
+            // TRANSACTION NEEDED
             const userAlreadyOwnsTeamInLeague = await db.Team.findOne({
                 where: {
                     [Op.and]: [
@@ -23,8 +28,6 @@ export default {
                     ]
                 }
             });
-            console.log("userAlreadyOwnsTeamInLeague");
-            console.log(userAlreadyOwnsTeamInLeague);
             if (userAlreadyOwnsTeamInLeague) {
                 throw new Error('User already owns team for this league');
             }
@@ -40,14 +43,12 @@ export default {
                 createdAt: new Date(),
                 updatedAt: new Date()
             });
-            //not sure we need where clause since leagueId is required (non-nullable) for this mutation
-            const where = args.leagueId ? { id: args.leagueId } : {};
             return await db.Team.findAll({
                 include: [
                     {
                         model: db.League,
                         as: 'league',
-                        where
+                        where: { id: args.leagueId }
                     }
                 ]
             });
@@ -57,83 +58,73 @@ export default {
             return error;
         }
     },
-    addPlayerToTeam: async (parent, args, { db }, info) => {
+    addPlayerToTeamRoster: async (parent, args, { db }, info) => {
         try {
-            const roster = await db.Roster.findOne({
-                include: [
-                    {
-                        model: db.Team,
-                        as: 'team',
-                        where: { id: args.teamId }
-                    }
-                ]
-            });
-            roster.setDataValue(`${args.rosterSpot.toLowerCase()}ID`, args.playerId);
-            // roster.setDataValue(args.rosterSpot.toLowerCase(), args.playerId)
-            await roster.save();
-            return await db.Team.findOne({
-                include: [
-                    {
-                        model: db.Roster,
-                        as: 'roster',
-                        include: [
-                            {
-                                model: db.Player,
-                                as: 'goalie',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'lsm',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'fo',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'attack1',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'attack2',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'midfield1',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'midfield2',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'defense1',
-                                required: false,
-                            },
-                            {
-                                model: db.Player,
-                                as: 'defense2',
-                                required: false,
-                            },
+            return await db.sequelize.transaction(async () => {
+                const playerIsActiveInLeague = await db.ActivePlayersForLeague.findOne({
+                    where: {
+                        [Op.and]: [
+                            { leagueId: args.leagueId },
+                            { playerId: args.playerId }
                         ]
                     }
-                ],
-                where: args.teamId
+                });
+                if (playerIsActiveInLeague) {
+                    throw Error("Player Already Exists In League");
+                }
+                await db.ActivePlayersForLeague.create({
+                    leagueId: args.leagueId,
+                    teamId: args.teamId,
+                    playerId: args.playerId,
+                    position: args.position,
+                    rosterSpot: args.rosterSpot,
+                    rosterId: args.rosterId
+                });
+                await db.Roster.update({ [`${args.rosterSpot.toLowerCase()}ID`]: args.playerId }, { where: { id: args.rosterId } });
+                return db.Roster.findOne({
+                    where: { id: args.rosterId },
+                    include: rosterData(db)
+                });
+            });
+            // If the execution reaches this line, the transaction has been committed successfully
+            // `result` is whatever was returned from the transaction callback (the `user`, in this case)
+        }
+        catch (error) {
+            // If the execution reaches this line, an error occurred.
+            // The transaction has already been rolled back automatically by Sequelize!
+            console.log(error);
+            return error;
+        }
+    },
+    removePlayerFromTeamRoster: async (parent, args, { db }, info) => {
+        //Spiked Function
+        // could TDD this...
+        try {
+            return await db.sequelize.transaction(async () => {
+                // JH-NOTE: efficiancy rationale
+                await db.ActivePlayersForLeague.destroy({
+                    where: {
+                        [Op.and]: [
+                            { leagueId: args.leagueId },
+                            { playerId: args.playerId }
+                        ]
+                    }
+                });
+                await db.Roster.update({ [`${args.rosterSpot.toLowerCase()}ID`]: null }, { where: { id: args.rosterId } });
+                return db.Roster.findOne({
+                    where: { id: args.rosterId },
+                    include: rosterData(db)
+                });
             });
         }
         catch (error) {
             console.error('Unable to connect to the database:', error);
+            return error;
         }
     },
     addStatLineForWeek: async (parent, args, { db }, info) => {
         try {
+            //TRANSACTION NEEDED
             const statistics = await db.Statistics.findOne({
                 where: { playerId: args.playerId }
             });
@@ -336,10 +327,12 @@ export default {
                 await currentSeasonStatLine.update(seasonStats);
             }
             await currentSeasonStatLine.save();
+            //JH-NOTE: consider adding transaction() to this process
             return statLine;
         }
         catch (error) {
             console.error('Unable to connect to the database:', error);
+            return error;
         }
     }
 };

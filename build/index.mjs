@@ -11,8 +11,7 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import 'dotenv/config';
 import typeDefs from "./schema/index";
-// JH-NOTE: below syntax resolves Typescript errors,
-// but is still sloppy
+// JH-NOTE:  adding file extension resolves Typescript errors
 // import typeDefs from "./schema/index.mjs";
 import resolvers from "./resolvers";
 import db from "../database/models";
