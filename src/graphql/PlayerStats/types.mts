@@ -11,9 +11,15 @@ export const types = `#graphql
   }
 
   enum PlayerSortField {
-    position
     lastName
+    position
     points
+    goals
+    assists
+    groundBalls
+    causedTurnovers
+    saves
+    faceoffsWon
   }
 
   type Player {

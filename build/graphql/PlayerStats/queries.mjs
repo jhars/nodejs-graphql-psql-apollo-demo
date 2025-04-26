@@ -1,3 +1,7 @@
 export const queries = `#graphql
-  players(playerId: Int, orderBy: PlayerOrder!): [Player!]
+  players(
+    availableForLeagueId: Int,
+    position: Position,
+    orderBy: PlayerOrder!
+  ): [Player!]
 `;

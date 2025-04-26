@@ -4,34 +4,53 @@ import { statLineData } from '../helpers/statLineHelpers'
 
 const queries = {
   players: async(root, args, {db}, info) => {
+    //ADD TRANSACTION
     try {
-      // Need to handle sortOrder better...
-        // should not need to be required
 
-      // see above JH-NOTE for why I may want to use this
-      // const where = args.playerId ? { id: args.playerId } : args.teamsId ? { teamsId: args.teamsId } : {};
-      // const players = await db.Player.findAll({where});
-      
-      const profileSort = args.orderBy.field == "points" ? null : [[args.orderBy.field, args.orderBy.order]]
+      const { field, order } = args.orderBy
 
-      //JH-NOTE: start here
-      //JH-NOTE: works, but this is sloppy, consider refactor
-      const statSort = args.orderBy.field == "points" ? [
-        [ {model: db.Statistics, as: 'statistics'}, {model: db.StatLine, as: 'statLineLastSeason'}, args.orderBy.field, args.orderBy.order]
-        ] : null
+      const { availableForLeagueId, position } = args
 
-      const players = await db.Player.findAll({
-      order: profileSort || statSort,
-      include: [
-        {
-            model: db.Statistics,
-            as: 'statistics',
-            include: statLineData(db)
+      const statSortCriteria = [[ 
+        {model: db.Statistics, as: 'statistics'},
+        {model: db.StatLine, as: 'statLineLastSeason'}, 
+        field, 
+        order
+      ]]
+
+      const playerProfileSortCriteria = [[field, order]]
+
+      const isStatSort = field == "points" || field == "assists" || field == "goals" || field == "groundBalls" || field == "causedTurnovers" || field ==  "saves" || field == "faceoffsWon"
+
+      const sortCriteria = isStatSort ? statSortCriteria : playerProfileSortCriteria
+
+      const wherePosition = position ? {position: position} : null
+
+      const activePlayersForLeague = await db.ActivePlayersForLeague.findAll({
+        attributes: ['playerId'],
+        raw: true,
+        where: { leagueId: availableForLeagueId }
+      })
+
+      const excludeIds = activePlayersForLeague.map(record => record.playerId)
+
+      return await db.Player.findAll({
+        order: sortCriteria,
+        include: [
+          {
+              model: db.Statistics,
+              as: 'statistics',
+              include: statLineData(db)
+          }
+        ],
+        where: {
+          [Op.and]: [
+            { id: { [Op.notIn]: excludeIds } },
+            wherePosition
+          ]
         }
-      ],
+        
       });
-      
-      return players
 
     } catch(error) {
       console.error('Unable to connect to the database:', error);

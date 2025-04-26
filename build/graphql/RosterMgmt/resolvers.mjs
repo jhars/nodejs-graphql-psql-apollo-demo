@@ -5,6 +5,13 @@ const queries = {
     roster: async (root, args, { db }, info) => {
         try {
             const rosterPlayerIDs = await db.Roster.findOne({ where: { teamId: args.teamId } });
+            const team = await db.Team.findOne({
+                where: { id: args.teamId },
+                include: {
+                    model: db.League,
+                    as: 'league'
+                }
+            });
             const goalie = await db.Player.findOne({
                 include: [
                     {
@@ -105,8 +112,10 @@ const queries = {
                     }
                 ]
             });
+            // teamId: rosterPlayerIDs.teamId,
             const roster = {
-                teamId: rosterPlayerIDs.teamId,
+                id: rosterPlayerIDs.id,
+                teamInfo: team,
                 goalie: goalie,
                 defense1: defense1,
                 defense2: defense2,
@@ -140,6 +149,7 @@ const mutations = {
                 if (playerIsActiveInLeague) {
                     throw Error("Player Already Exists In League");
                 }
+                //JH-NOTE: I might be able to remove position
                 await db.ActivePlayersForLeague.create({
                     leagueId: args.leagueId,
                     teamId: args.teamId,

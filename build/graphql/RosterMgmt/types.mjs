@@ -3,6 +3,7 @@ export const types = `#graphql
   type Roster {
     id: ID
     teamId: Int!
+    teamInfo: Team
     goalie: Player
     defense1: Player
     defense2: Player    
