@@ -20,7 +20,7 @@ export const rosterData = (db) => {
           as: 'lsm',
           required: false,
         },
-		{
+		    {
           model: db.Player,
           as: 'ssdm',
           required: false,

@@ -1,0 +1,18 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+		}
+	],
+	"debugger_configurations":
+	[
+		{
+			"name": "Attach via npm",
+			"type": "node",
+			"request": "attach",
+			"port": 9229,
+			"program": "${workspaceFolder}/build/app.mjs"
+		}
+	],
+}

@@ -4,7 +4,7 @@
   "main": "build/app.mjs",
   "scripts": {
     "watch": "tsc -p tsconfig.json --watch",
-    "dev": "nodemon --import=extensionless/register build/app.mjs",
+    "dev": "nodemon --inspect --import=extensionless/register build/app.mjs",
     "start": "node --import=extensionless/register build/app.mjs"
   },
   "keywords": [],

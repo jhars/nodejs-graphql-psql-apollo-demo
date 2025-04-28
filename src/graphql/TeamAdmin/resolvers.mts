@@ -15,7 +15,6 @@ const queries = {
         : args.teamsId ? { id: args.teamsId }
         : args.leagueId ? { leagueId: args.leagueId } : {};
 
-      
       return await db.Team.findAll({
       include: [
         {

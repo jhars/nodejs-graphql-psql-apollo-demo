@@ -1,0 +1,1229 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"flex",
+				"flexDirection"
+			],
+			[
+				"font",
+				"fontSize"
+			],
+			[
+				"drop",
+				"addDropButton"
+			],
+			[
+				"sort",
+				"sortTable"
+			],
+			[
+				"my",
+				"myTeam"
+			],
+			[
+				"Roster",
+				"RosterTableHeader"
+			],
+			[
+				"Rost",
+				"RosterSpot"
+			],
+			[
+				"dro",
+				"dropPlayerFromTeam"
+			],
+			[
+				"ros",
+				"rosterSpot"
+			],
+			[
+				"AddP",
+				"AddPlayerConfirmationModal"
+			],
+			[
+				"te",
+				"teamname"
+			],
+			[
+				"add",
+				"addPlayer"
+			],
+			[
+				"a",
+				"addPlayer"
+			],
+			[
+				"Add",
+				"AddPlayerContext"
+			],
+			[
+				"reac",
+				"react-native"
+			],
+			[
+				"A",
+				"AddPlayerModal"
+			],
+			[
+				"use",
+				"useEffect"
+			],
+			[
+				"App",
+				"AppProvider"
+			],
+			[
+				"fle",
+				"flex-end"
+			],
+			[
+				"tex",
+				"textAlign"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"sta",
+				"statLineLastSeason"
+			],
+			[
+				"pla",
+				"playerInfo"
+			],
+			[
+				"game",
+				"totalGamesPlayed"
+			],
+			[
+				"totalF",
+				"totalFaceoffsWon"
+			],
+			[
+				"totalTwo",
+				"totalTwoPointShotsOnGoal"
+			],
+			[
+				"tot",
+				"totalShots"
+			],
+			[
+				"total",
+				"totalAssists"
+			],
+			[
+				"to",
+				"totalAssists"
+			],
+			[
+				"Stat",
+				"StatLine"
+			],
+			[
+				"player",
+				"playerStatisticsId"
+			],
+			[
+				"stat",
+				"statistics"
+			],
+			[
+				"statLine",
+				"statLineLastSeason"
+			],
+			[
+				"week",
+				"statLineWeek10"
+			],
+			[
+				"where",
+				"whereLeagueId"
+			],
+			[
+				"am",
+				"amount"
+			],
+			[
+				"ta",
+				"tax_adjusted_price"
+			],
+			[
+				"order",
+				"order_items"
+			],
+			[
+				"order_",
+				"order_items"
+			],
+			[
+				"i",
+				"isBook"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"team",
+				"teamOwner"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"leag",
+				"league"
+			],
+			[
+				"get",
+				"getCurrentUser"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"For",
+				"FormBuilder"
+			],
+			[
+				"se",
+				"setIsLoading"
+			],
+			[
+				"set",
+				"setCurrentPage"
+			],
+			[
+				"count",
+				"countryController"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "laxFantasyAPI-05.sublime-project",
+			"settings":
+			{
+				"buffer_size": 357,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					14,
+					1,
+					"insert",
+					{
+						"characters": "\\"
+					},
+					"AQAAAEsAAAAAAAAATAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASwAAAAAAAABLAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEsAAAAAAAAASwAAAAAAAAABAAAAXA",
+					"AQAAAAAAAAABAAAATAAAAAAAAABMAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AwAAAEsAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABNAAAAAAAAAAAAAABNAAAAAAAAAE4AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASwAAAAAAAABLAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"insert_snippet",
+					{
+						"contents": "{$0}"
+					},
+					"AQAAAE4AAAAAAAAAUAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATgAAAAAAAABOAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"run_macro_file",
+					{
+						"file": "res://Packages/Default/Add Line in Braces.sublime-macro"
+					},
+					"BgAAAE8AAAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAAABSAAAAAAAAAAAAAABSAAAAAAAAAFMAAAAAAAAAAAAAAFMAAAAAAAAAVQAAAAAAAAAAAAAAUAAAAAAAAABQAAAAAAAAAAIAAAAJCVAAAAAAAAAAUwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATwAAAAAAAABPAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					36,
+					1,
+					"paste_and_indent",
+					null,
+					"AQAAAFMAAAAAAAAAAAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUwAAAAAAAABTAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"insert",
+					{
+						"characters": "dev"
+					},
+					"BAAAAPkAAAAAAAAA+gAAAAAAAAAAAAAA+gAAAAAAAAD6AAAAAAAAAAUAAABkZWJ1Z/oAAAAAAAAA+wAAAAAAAAAAAAAA+wAAAAAAAAD8AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA/gAAAAAAAAD5AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					50,
+					1,
+					"insert",
+					{
+						"characters": " r"
+					},
+					"AgAAAPkAAAAAAAAA+gAAAAAAAAAAAAAA+gAAAAAAAAD7AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+QAAAAAAAAD5AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					51,
+					2,
+					"left_delete",
+					null,
+					"AgAAAPoAAAAAAAAA+gAAAAAAAAABAAAAcvkAAAAAAAAA+QAAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAA+wAAAAAAAAD7AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					52,
+					1,
+					"insert",
+					{
+						"characters": "run"
+					},
+					"AwAAAPkAAAAAAAAA+gAAAAAAAAAAAAAA+gAAAAAAAAD7AAAAAAAAAAAAAAD7AAAAAAAAAPwAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+QAAAAAAAAD5AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					53,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAPwAAAAAAAAA/QAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA/AAAAAAAAAD8AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					1,
+					"left_delete",
+					null,
+					"AQAAAO4AAAAAAAAA7gAAAAAAAAAHAAAALXNjcmlwdA",
+					"AQAAAAAAAAABAAAA9QAAAAAAAADuAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					63,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPIAAAAAAAAA8gAAAAAAAAADAAAAcnVu",
+					"AQAAAAAAAAABAAAA8gAAAAAAAAD1AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					65,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPIAAAAAAAAA8gAAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAA8wAAAAAAAADzAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					72,
+					1,
+					"insert",
+					{
+						"characters": "/build"
+					},
+					"BgAAALUAAAAAAAAAtgAAAAAAAAAAAAAAtgAAAAAAAAC3AAAAAAAAAAAAAAC3AAAAAAAAALgAAAAAAAAAAAAAALgAAAAAAAAAuQAAAAAAAAAAAAAAuQAAAAAAAAC6AAAAAAAAAAAAAAC6AAAAAAAAALsAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtQAAAAAAAAC1AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					73,
+					1,
+					"insert",
+					{
+						"characters": "/"
+					},
+					"AQAAALsAAAAAAAAAvAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuwAAAAAAAAC7AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					74,
+					1,
+					"insert",
+					{
+						"characters": "src"
+					},
+					"AwAAALwAAAAAAAAAvQAAAAAAAAAAAAAAvQAAAAAAAAC+AAAAAAAAAAAAAAC+AAAAAAAAAL8AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAAAAAAAAAC8AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					81,
+					1,
+					"left_delete",
+					null,
+					"AQAAALUAAAAAAAAAtQAAAAAAAAAKAAAAL2J1aWxkL3NyYw",
+					"AQAAAAAAAAABAAAAtQAAAAAAAAC/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					94,
+					1,
+					"insert",
+					{
+						"characters": "/build"
+					},
+					"BgAAALUAAAAAAAAAtgAAAAAAAAAAAAAAtgAAAAAAAAC3AAAAAAAAAAAAAAC3AAAAAAAAALgAAAAAAAAAAAAAALgAAAAAAAAAuQAAAAAAAAAAAAAAuQAAAAAAAAC6AAAAAAAAAAAAAAC6AAAAAAAAALsAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtQAAAAAAAAC1AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					95,
+					1,
+					"insert",
+					{
+						"characters": "/"
+					},
+					"AQAAALsAAAAAAAAAvAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuwAAAAAAAAC7AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					96,
+					1,
+					"insert",
+					{
+						"characters": "src/"
+					},
+					"BAAAALwAAAAAAAAAvQAAAAAAAAAAAAAAvQAAAAAAAAC+AAAAAAAAAAAAAAC+AAAAAAAAAL8AAAAAAAAAAAAAAL8AAAAAAAAAwAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAAAAAAAAAC8AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					4,
+					"left_delete",
+					null,
+					"BAAAAL8AAAAAAAAAvwAAAAAAAAABAAAAL74AAAAAAAAAvgAAAAAAAAABAAAAY70AAAAAAAAAvQAAAAAAAAABAAAAcrwAAAAAAAAAvAAAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAwAAAAAAAAADAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					98,
+					1,
+					"insert",
+					{
+						"characters": "app.m"
+					},
+					"BQAAALwAAAAAAAAAvQAAAAAAAAAAAAAAvQAAAAAAAAC+AAAAAAAAAAAAAAC+AAAAAAAAAL8AAAAAAAAAAAAAAL8AAAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAAADBAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAAAAAAAAAC8AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					99,
+					1,
+					"insert",
+					{
+						"characters": "js"
+					},
+					"AgAAAMEAAAAAAAAAwgAAAAAAAAAAAAAAwgAAAAAAAADDAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwQAAAAAAAADBAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					112,
+					2,
+					"left_delete",
+					null,
+					"AgAAALwAAAAAAAAAvAAAAAAAAAAHAAAAYXBwLm1qc7sAAAAAAAAAuwAAAAAAAAABAAAALw",
+					"AQAAAAAAAAABAAAAwwAAAAAAAAC8AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					117,
+					2,
+					"left_delete",
+					null,
+					"AgAAALYAAAAAAAAAtgAAAAAAAAAFAAAAYnVpbGS1AAAAAAAAALUAAAAAAAAAAQAAAC8",
+					"AQAAAAAAAAABAAAAtgAAAAAAAAC7AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					122,
+					1,
+					"insert",
+					{
+						"characters": "TTACH"
+					},
+					"BgAAAI8AAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACQAAAAAAAAAAYAAABsYXVuY2iQAAAAAAAAAJEAAAAAAAAAAAAAAJEAAAAAAAAAkgAAAAAAAAAAAAAAkgAAAAAAAACTAAAAAAAAAAAAAACTAAAAAAAAAJQAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjwAAAAAAAACVAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					123,
+					5,
+					"left_delete",
+					null,
+					"BQAAAJMAAAAAAAAAkwAAAAAAAAABAAAASJIAAAAAAAAAkgAAAAAAAAABAAAAQ5EAAAAAAAAAkQAAAAAAAAABAAAAQZAAAAAAAAAAkAAAAAAAAAABAAAAVI8AAAAAAAAAjwAAAAAAAAABAAAAVA",
+					"AQAAAAAAAAABAAAAlAAAAAAAAACUAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					124,
+					1,
+					"insert",
+					{
+						"characters": "attach"
+					},
+					"BgAAAI8AAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACRAAAAAAAAAAAAAACRAAAAAAAAAJIAAAAAAAAAAAAAAJIAAAAAAAAAkwAAAAAAAAAAAAAAkwAAAAAAAACUAAAAAAAAAAAAAACUAAAAAAAAAJUAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjwAAAAAAAACPAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					132,
+					1,
+					"insert",
+					{
+						"characters": "/build"
+					},
+					"BgAAALUAAAAAAAAAtgAAAAAAAAAAAAAAtgAAAAAAAAC3AAAAAAAAAAAAAAC3AAAAAAAAALgAAAAAAAAAAAAAALgAAAAAAAAAuQAAAAAAAAAAAAAAuQAAAAAAAAC6AAAAAAAAAAAAAAC6AAAAAAAAALsAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtQAAAAAAAAC1AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					133,
+					1,
+					"insert",
+					{
+						"characters": "/app"
+					},
+					"BAAAALsAAAAAAAAAvAAAAAAAAAAAAAAAvAAAAAAAAAC9AAAAAAAAAAAAAAC9AAAAAAAAAL4AAAAAAAAAAAAAAL4AAAAAAAAAvwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAuwAAAAAAAAC7AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					134,
+					1,
+					"insert",
+					{
+						"characters": ".mjs"
+					},
+					"BAAAAL8AAAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAAADBAAAAAAAAAAAAAADBAAAAAAAAAMIAAAAAAAAAAAAAAMIAAAAAAAAAwwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvwAAAAAAAAC/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					139,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAAUBAAAAAAAABgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABQEAAAAAAAAFAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					140,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAAYBAAAAAAAABwEAAAAAAAAAAAAABwEAAAAAAAAKAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABgEAAAAAAAAGAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					141,
+					1,
+					"paste",
+					null,
+					"AQAAAAoBAAAAAAAAGQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACgEAAAAAAAAKAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					144,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"${0:$SELECTION}\""
+					},
+					"AgAAAAoBAAAAAAAACgEAAAAAAAAOAAAAcnVudGltZVZlcnNpb24KAQAAAAAAABoBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGAEAAAAAAAAKAQAAAAAAAAAAAAAAwF5A"
+				],
+				[
+					146,
+					1,
+					"insert",
+					{
+						"characters": ":"
+					},
+					"AQAAABoBAAAAAAAAGwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGgEAAAAAAAAaAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					147,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAABsBAAAAAAAAHAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGwEAAAAAAAAbAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					148,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAABwBAAAAAAAAHgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHAEAAAAAAAAcAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					153,
+					1,
+					"insert",
+					{
+						"characters": "22"
+					},
+					"AgAAAB0BAAAAAAAAHgEAAAAAAAAAAAAAHgEAAAAAAAAfAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHQEAAAAAAAAdAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					158,
+					1,
+					"insert",
+					{
+						"characters": "launch"
+					},
+					"BwAAAI8AAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACQAAAAAAAAAAYAAABhdHRhY2iQAAAAAAAAAJEAAAAAAAAAAAAAAJEAAAAAAAAAkgAAAAAAAAAAAAAAkgAAAAAAAACTAAAAAAAAAAAAAACTAAAAAAAAAJQAAAAAAAAAAAAAAJQAAAAAAAAAlQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjwAAAAAAAACVAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					162,
+					1,
+					"insert",
+					{
+						"characters": ".9"
+					},
+					"AgAAAB8BAAAAAAAAIAEAAAAAAAAAAAAAIAEAAAAAAAAhAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHwEAAAAAAAAfAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					163,
+					1,
+					"insert",
+					{
+						"characters": ".0"
+					},
+					"AgAAACEBAAAAAAAAIgEAAAAAAAAAAAAAIgEAAAAAAAAjAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIQEAAAAAAAAhAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					170,
+					1,
+					"cut",
+					null,
+					"AQAAAJsAAAAAAAAAmwAAAAAAAAAqAAAAImN3ZCI6ICIke3dvcmtzcGFjZUZvbGRlcn0vYnVpbGQvYXBwLm1qcyIs",
+					"AQAAAAAAAAABAAAAxQAAAAAAAACbAAAAAAAAAAAAAAAAwF5A"
+				],
+				[
+					172,
+					1,
+					"paste",
+					null,
+					"AQAAAJsAAAAAAAAAxQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmwAAAAAAAACbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					178,
+					1,
+					"insert",
+					{
+						"characters": "program"
+					},
+					"CAAAAJwAAAAAAAAAnQAAAAAAAAAAAAAAnQAAAAAAAACdAAAAAAAAAAMAAABjd2SdAAAAAAAAAJ4AAAAAAAAAAAAAAJ4AAAAAAAAAnwAAAAAAAAAAAAAAnwAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAAKEAAAAAAAAAAAAAAKEAAAAAAAAAogAAAAAAAAAAAAAAogAAAAAAAACjAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnAAAAAAAAACfAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					182,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAJcAAAAAAAAAmAAAAAAAAAAAAAAAmAAAAAAAAACbAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlwAAAAAAAACXAAAAAAAAAAAAAAAAQHpA"
+				],
+				[
+					183,
+					1,
+					"paste",
+					null,
+					"AQAAAJsAAAAAAAAAxQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmwAAAAAAAACbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					186,
+					2,
+					"left_delete",
+					null,
+					"AgAAALYAAAAAAAAAtgAAAAAAAAANAAAAYnVpbGQvYXBwLm1qc7UAAAAAAAAAtQAAAAAAAAABAAAALw",
+					"AQAAAAAAAAABAAAAwwAAAAAAAAC2AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					193,
+					1,
+					"insert",
+					{
+						"characters": "attach"
+					},
+					"BwAAAI8AAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACQAAAAAAAAAAYAAABsYXVuY2iQAAAAAAAAAJEAAAAAAAAAAAAAAJEAAAAAAAAAkgAAAAAAAAAAAAAAkgAAAAAAAACTAAAAAAAAAAAAAACTAAAAAAAAAJQAAAAAAAAAAAAAAJQAAAAAAAAAlQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjwAAAAAAAACVAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					199,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAAJcAAAAAAAAAmAAAAAAAAAAAAAAAmAAAAAAAAACbAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlwAAAAAAAACXAAAAAAAAAP///////+9/"
+				],
+				[
+					200,
+					1,
+					"paste",
+					null,
+					"AQAAAJsAAAAAAAAApwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmwAAAAAAAACbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					201,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAKcAAAAAAAAAqAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApwAAAAAAAACnAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					204,
+					1,
+					"insert",
+					{
+						"characters": "2"
+					},
+					"AgAAAKMAAAAAAAAApAAAAAAAAAAAAAAApAAAAAAAAACkAAAAAAAAAAQAAAA5MjI5",
+					"AQAAAAAAAAABAAAApwAAAAAAAACjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					205,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKMAAAAAAAAAowAAAAAAAAABAAAAMg",
+					"AQAAAAAAAAABAAAApAAAAAAAAACkAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					206,
+					1,
+					"insert",
+					{
+						"characters": "4000"
+					},
+					"BAAAAKMAAAAAAAAApAAAAAAAAAAAAAAApAAAAAAAAAClAAAAAAAAAAAAAAClAAAAAAAAAKYAAAAAAAAAAAAAAKYAAAAAAAAApwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAowAAAAAAAACjAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"contents": "\"cwd\": \"${workspaceFolder}/build/app.mjs\",",
+			"settings":
+			{
+				"buffer_size": 42,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"paste",
+					null,
+					"AQAAAAAAAAAAAAAAKgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 1250,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Debugger",
+				"Preferences: Debugger Settings"
+			],
+			[
+				"Debugg",
+				"Debugger: Stop"
+			],
+			[
+				"Show",
+				"Debugger: Show Protocol"
+			],
+			[
+				"Debu",
+				"Debugger: Open"
+			],
+			[
+				"enable",
+				"Package Control: Advanced Enable Packages"
+			],
+			[
+				"package control",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Enable Debug Mode"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"Packa",
+				"View Package File"
+			],
+			[
+				"package",
+				"View Package File"
+			],
+			[
+				"ipacka",
+				"View Package File"
+			],
+			[
+				"pac",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src"
+	],
+	"file_history":
+	[
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/package.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/ios/Podfile",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/App.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/MyTeamsScreen.tsx",
+		"/Users/macpan/Library/Application Support/Sublime Text/Installed Packages/JsDebuggr.sublime-package",
+		"/Users/macpan/Library/Application Support/Sublime Text/Packages/User/Node.sublime-build",
+		"/Users/macpan/Library/Application Support/Sublime Text/Packages/JavaScript.sublime-package",
+		"/Users/macpan/Library/Application Support/Sublime Text/Packages/Package Control/Package Control.py",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/RosterRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/PlayerRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/RosterTableHeader.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/HomeScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/LeagueTeamsScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/TeamRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/navigation/index.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/DropPlayerConfirmationModal.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/AddPlayerConfirmationModal.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/TeamsList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/RosterScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/LeaguesScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/AllPlayersTableHeader.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/LeagueRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/LeagueSelectFromList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/CreateNewTeamConfirmation.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/AllPlayersScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/MyAccountScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/LeagueRowSelectable.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/data/queries.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/CreateNewTeamScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/LeaguesList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/data/mutations.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/RosterList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/data/types.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/node_modules/react/cjs/react.development.js",
+		"/Users/macpan/Desktop/Modal-SAVERS.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/node_modules/@apollo/client/react/hooks/hooks.cjs",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/contexts/AddPlayerContext.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/contexts/UserContext.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/RosterList-SAVER.tsx",
+		"/Users/macpan/Desktop/RosterRow-SAVER.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/RosterList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/RosterScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/AllPlayersScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/CreateNewTeamConfirmation.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/CreateNewTeamScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/LeaguesList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/LeagueRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/TeamRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/LeagueTeamsScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/TeamsList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/MyTeamsScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/LeagueSelectFromList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/LeagueRowSelectable.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/data/userService.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/amplifyconfiguration.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/aws-exports.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/aws-exports-prod.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/.gitignore",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/HomeScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/types.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/LeaguesScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/MyAccountScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/reducers/teamNewToLeagueReducer.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/actions/teamsAction.ts",
+		"/Users/macpan/Desktop/aws-SAVERS/amplify/.config/project-config.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/amplify/.config/project-config.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/metro.config.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/reducers/currentUserReducer.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/RosterRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/reducers/store.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/services/userSessionService.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim/with-selector.development.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/tsconfig.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/node_modules/@aws-amplify/ui-react-core/src/Authenticator/hooks/useAuthenticator/utils.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/actions/currentUserAction.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/PlayerRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/TeamPlayersScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/TeamPlayersList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/reducers/playerReducer.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/actions/playerAction.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/README.md",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/services/playerService.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/index.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/.npmrc",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/amplify/team-provider-info.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/tsconfig.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/package.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/nodemon.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/README.md",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/schema/types.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/resolvers/queries.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/index.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/build/database/sequelize.config.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/sequelize.config.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/.sequelizerc",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/resolvers/index.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/schema/index.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/helpers/statLineHelpers.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/statline.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/schema/queries.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250407194054-create-stat-line.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/statistics.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250414153413-change_playerId_on_statistics_to_be_unique.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250407193401-create-statistics.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250321174019-create-player.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250412231642-remove_statLineIds_from_statistics.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/player.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/.gitignore",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/.env",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250412234253-drop_statlineseason_table.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/schema/mutations.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250412232759-rename_playerStatisticsId_to_statisticsId.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250328183143-remove_stats_from_players.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/index.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/resolvers/mutations.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/Demo-StatLine-Single.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/Demo-Statistics-Single.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/Demo-StatLine.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/generate_UUIDs_ForWeeks.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/Demo-Statistics.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/StatLineLastSeason.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/stats.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/team.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/league.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250213023920-create-league.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250213024036-create-team.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250409183421-associate_stats_thru_statline.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250328185801-create-stat-line-last-season.js"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 118.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "laxFantasyAPI-05.sublime-project",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								357,
+								357
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JSON/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 42,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								42,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JSON/JSON.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "package.json",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JSON/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.Debugger":
+	{
+		"height": 306.0
+	},
+	"output.Debugger Console":
+	{
+		"height": 306.0
+	},
+	"output.exec":
+	{
+		"height": 91.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "Packages/User/Node.sublime-build",
+	"project": "laxFantasyAPI-05.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Heinkle",
+				"Heinkle"
+			],
+			[
+				"",
+				"JH-ToDo-Dec"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 301.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 298.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

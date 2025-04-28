@@ -1,0 +1,550 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"flex",
+				"flexDirection"
+			],
+			[
+				"font",
+				"fontSize"
+			],
+			[
+				"drop",
+				"addDropButton"
+			],
+			[
+				"sort",
+				"sortTable"
+			],
+			[
+				"my",
+				"myTeam"
+			],
+			[
+				"Roster",
+				"RosterTableHeader"
+			],
+			[
+				"Rost",
+				"RosterSpot"
+			],
+			[
+				"dro",
+				"dropPlayerFromTeam"
+			],
+			[
+				"ros",
+				"rosterSpot"
+			],
+			[
+				"AddP",
+				"AddPlayerConfirmationModal"
+			],
+			[
+				"te",
+				"teamname"
+			],
+			[
+				"add",
+				"addPlayer"
+			],
+			[
+				"a",
+				"addPlayer"
+			],
+			[
+				"Add",
+				"AddPlayerContext"
+			],
+			[
+				"reac",
+				"react-native"
+			],
+			[
+				"A",
+				"AddPlayerModal"
+			],
+			[
+				"use",
+				"useEffect"
+			],
+			[
+				"App",
+				"AppProvider"
+			],
+			[
+				"fle",
+				"flex-end"
+			],
+			[
+				"tex",
+				"textAlign"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"sta",
+				"statLineLastSeason"
+			],
+			[
+				"pla",
+				"playerInfo"
+			],
+			[
+				"game",
+				"totalGamesPlayed"
+			],
+			[
+				"totalF",
+				"totalFaceoffsWon"
+			],
+			[
+				"totalTwo",
+				"totalTwoPointShotsOnGoal"
+			],
+			[
+				"tot",
+				"totalShots"
+			],
+			[
+				"total",
+				"totalAssists"
+			],
+			[
+				"to",
+				"totalAssists"
+			],
+			[
+				"Stat",
+				"StatLine"
+			],
+			[
+				"player",
+				"playerStatisticsId"
+			],
+			[
+				"stat",
+				"statistics"
+			],
+			[
+				"statLine",
+				"statLineLastSeason"
+			],
+			[
+				"week",
+				"statLineWeek10"
+			],
+			[
+				"where",
+				"whereLeagueId"
+			],
+			[
+				"am",
+				"amount"
+			],
+			[
+				"ta",
+				"tax_adjusted_price"
+			],
+			[
+				"order",
+				"order_items"
+			],
+			[
+				"order_",
+				"order_items"
+			],
+			[
+				"i",
+				"isBook"
+			],
+			[
+				"find",
+				"findOne"
+			],
+			[
+				"team",
+				"teamOwner"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"leag",
+				"league"
+			],
+			[
+				"get",
+				"getCurrentUser"
+			],
+			[
+				"cons",
+				"console"
+			],
+			[
+				"For",
+				"FormBuilder"
+			],
+			[
+				"se",
+				"setIsLoading"
+			],
+			[
+				"set",
+				"setCurrentPage"
+			],
+			[
+				"count",
+				"countryController"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"enable",
+				"Package Control: Advanced Enable Packages"
+			],
+			[
+				"package control",
+				"Package Control: List Packages"
+			],
+			[
+				"pack",
+				"Package Control: Enable Debug Mode"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			],
+			[
+				"Packa",
+				"View Package File"
+			],
+			[
+				"package",
+				"View Package File"
+			],
+			[
+				"ipacka",
+				"View Package File"
+			],
+			[
+				"pac",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05"
+	],
+	"file_history":
+	[
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/package.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/ios/Podfile",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/App.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/MyTeamsScreen.tsx",
+		"/Users/macpan/Library/Application Support/Sublime Text/Installed Packages/JsDebuggr.sublime-package",
+		"/Users/macpan/Library/Application Support/Sublime Text/Packages/User/Node.sublime-build",
+		"/Users/macpan/Library/Application Support/Sublime Text/Packages/JavaScript.sublime-package",
+		"/Users/macpan/Library/Application Support/Sublime Text/Packages/Package Control/Package Control.py",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/RosterRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/PlayerRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/RosterTableHeader.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/HomeScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/LeagueTeamsScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/TeamRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/navigation/index.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/DropPlayerConfirmationModal.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/AddPlayerConfirmationModal.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/TeamsList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/RosterScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/LeaguesScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/AllPlayersTableHeader.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/LeagueRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/LeagueSelectFromList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/CreateNewTeamConfirmation.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/AllPlayersScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/MyAccountScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/LeagueRowSelectable.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/data/queries.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/screens/CreateNewTeamScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/LeaguesList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/data/mutations.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/RosterList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/data/types.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/node_modules/react/cjs/react.development.js",
+		"/Users/macpan/Desktop/Modal-SAVERS.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/node_modules/@apollo/client/react/hooks/hooks.cjs",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/contexts/AddPlayerContext.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/contexts/UserContext.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/views/components/RosterList-SAVER.tsx",
+		"/Users/macpan/Desktop/RosterRow-SAVER.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/RosterList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/RosterScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/AllPlayersScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/CreateNewTeamConfirmation.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/CreateNewTeamScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/LeaguesList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/LeagueRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/TeamRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/LeagueTeamsScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/TeamsList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/MyTeamsScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/LeagueSelectFromList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/LeagueRowSelectable.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/data/userService.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/amplifyconfiguration.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/aws-exports.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/aws-exports-prod.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/.gitignore",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/HomeScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/types.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/LeaguesScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/MyAccountScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/reducers/teamNewToLeagueReducer.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/actions/teamsAction.ts",
+		"/Users/macpan/Desktop/aws-SAVERS/amplify/.config/project-config.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/amplify/.config/project-config.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/metro.config.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/reducers/currentUserReducer.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/RosterRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/reducers/store.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/services/userSessionService.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/node_modules/use-sync-external-store/cjs/use-sync-external-store-shim/with-selector.development.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/tsconfig.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/node_modules/@aws-amplify/ui-react-core/src/Authenticator/hooks/useAuthenticator/utils.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/actions/currentUserAction.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/PlayerRow.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/screens/TeamPlayersScreen.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/components/TeamPlayersList.tsx",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/reducers/playerReducer.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/actions/playerAction.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/README.md",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/src/services/playerService.ts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/index.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/.npmrc",
+		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/amplify/team-provider-info.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/tsconfig.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/package.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/nodemon.json",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/README.md",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/schema/types.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/resolvers/queries.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/index.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/build/database/sequelize.config.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/sequelize.config.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/.sequelizerc",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/resolvers/index.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/schema/index.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/helpers/statLineHelpers.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/statline.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/schema/queries.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250407194054-create-stat-line.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/statistics.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250414153413-change_playerId_on_statistics_to_be_unique.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250407193401-create-statistics.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250321174019-create-player.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250412231642-remove_statLineIds_from_statistics.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/player.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/.gitignore",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/.env",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250412234253-drop_statlineseason_table.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/schema/mutations.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250412232759-rename_playerStatisticsId_to_statisticsId.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250328183143-remove_stats_from_players.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/index.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/src/resolvers/mutations.mts",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/Demo-StatLine-Single.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/Demo-Statistics-Single.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/Demo-StatLine.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/generate_UUIDs_ForWeeks.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/Demo-Statistics.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/StatLineLastSeason.sql",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/stats.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/team.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/models/league.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250213023920-create-league.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250213024036-create-team.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250409183421-associate_stats_thru_statline.js",
+		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05/database/migrations/20250328185801-create-stat-line-last-season.js"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 118.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 91.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 126.0
+	},
+	"pinned_build_system": "Packages/User/Node.sublime-build",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Heinkle",
+				"Heinkle"
+			],
+			[
+				"",
+				"JH-ToDo-Dec"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 301.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 298.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
