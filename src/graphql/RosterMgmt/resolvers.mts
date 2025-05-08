@@ -127,7 +127,7 @@ const queries = {
         ]
       })
 
-      // teamId: rosterPlayerIDs.teamId,
+      
       const roster = {
         id: rosterPlayerIDs.id,
         teamInfo: team,

@@ -274,10 +274,6 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/Users/macpan/dev/APPS/laxFantasy/lfServer/laxFantasyAPI-05"
-	],
 	"file_history":
 	[
 		"/Users/macpan/dev/APPS/laxFantasy/lfMobile/laxFantasyMobile/package.json",
@@ -411,7 +407,7 @@
 	],
 	"find":
 	{
-		"height": 30.0
+		"height": 28.0
 	},
 	"find_in_files":
 	{
@@ -451,7 +447,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 30.0
+		"height": 28.0
 	},
 	"input":
 	{
@@ -496,7 +492,7 @@
 	"project": "untitled.sublime-project",
 	"replace":
 	{
-		"height": 56.0
+		"height": 52.0
 	},
 	"save_all_on_build": true,
 	"select_file":
