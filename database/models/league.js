@@ -10,7 +10,11 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   League.init({
-    title: DataTypes.STRING
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
+    title: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'League',

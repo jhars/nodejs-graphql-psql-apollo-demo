@@ -2,6 +2,6 @@ export const queries = `#graphql
   players(
     availableForLeagueId: Int,
     position: Position,
-    orderBy: PlayerOrder!
+    orderBy: PlayerOrder
   ): [Player!]
 `;

@@ -18,7 +18,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Team.init({
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+    },
     name: DataTypes.STRING,
+    leagueId: DataTypes.INTEGER,
     ownerId: DataTypes.UUID
   }, {
     sequelize,

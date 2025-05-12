@@ -85,7 +85,12 @@ module.exports = (sequelize, DataTypes) => {
 
     }
   }
-
+  // Also Included statLineWeek1-10, which should be
+  // abstracted out to a season config table-script
+  // However, more curiously pressing, I am
+  // Unable to add statLineCurrentSeason OR statLineLastSeason
+  // to init method of this model becasue of reference higher
+  // in file 
   Statistics.init({
     id: {
       allowNull: false,
@@ -98,7 +103,9 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       unique: true
     },
-    season: DataTypes.STRING
+    season: DataTypes.STRING,
+    // statLineLastSeason: DataTypes.UUID,
+    // statLineCurrentSeason: DataTypes.UUID,
   }, {
     sequelize,
     modelName: 'Statistics',

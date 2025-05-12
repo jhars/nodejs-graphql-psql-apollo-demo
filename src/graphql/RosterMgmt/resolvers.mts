@@ -1,6 +1,6 @@
 import dotenv from 'dotenv'
 import { Op, Sequelize } from 'sequelize';
-import { statLineData } from '../dataHelpers/statLineHelpers'
+import { statLineData } from '../helpers/statLineHelpers'
 import { rosterData } from '../helpers/rosterHelpers'
 
 const queries = {

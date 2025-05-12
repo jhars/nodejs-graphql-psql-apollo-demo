@@ -2,26 +2,37 @@ import { Op, Sequelize } from 'sequelize';
 import { statLineData } from '../helpers/statLineHelpers';
 const queries = {
     players: async (root, args, { db }, info) => {
-        //ADD TRANSACTION
+        //ADD TRANSACTION - unecessary on queries for now
         try {
-            const { field, order } = args.orderBy;
-            const { availableForLeagueId, position } = args;
-            const statSortCriteria = [[
-                    { model: db.Statistics, as: 'statistics' },
-                    { model: db.StatLine, as: 'statLineLastSeason' },
-                    field,
-                    order
-                ]];
-            const playerProfileSortCriteria = [[field, order]];
-            const isStatSort = field == "points" || field == "assists" || field == "goals" || field == "groundBalls" || field == "causedTurnovers" || field == "saves" || field == "faceoffsWon";
-            const sortCriteria = isStatSort ? statSortCriteria : playerProfileSortCriteria;
-            const wherePosition = position ? { position: position } : null;
+            const sortField = args.orderBy?.field ?? null;
+            const sortOrder = args.orderBy?.order ?? null;
+            const leagueID = args.availableForLeagueId ?? null;
+            const position = args.position ?? null;
             const activePlayersForLeague = await db.ActivePlayersForLeague.findAll({
                 attributes: ['playerId'],
                 raw: true,
-                where: { leagueId: availableForLeagueId }
+                where: { leagueId: leagueID }
             });
             const excludeIds = activePlayersForLeague.map(record => record.playerId);
+            const wherePosition = position ? { position: position } : null;
+            const wherePositionAndAvailable = {
+                [Op.and]: [
+                    { id: { [Op.notIn]: excludeIds } },
+                    wherePosition
+                ]
+            };
+            let sortCriteria = [];
+            if (sortField && sortOrder) {
+                const isStatSort = sortField == "points" || sortField == "assists" || sortField == "goals" || sortField == "groundBalls" || sortField == "causedTurnovers" || sortField == "saves" || sortField == "faceoffsWon";
+                const statSortCriteria = [[
+                        { model: db.Statistics, as: 'statistics' },
+                        { model: db.StatLine, as: 'statLineLastSeason' },
+                        sortField,
+                        sortOrder
+                    ]];
+                const playerProfileSortCriteria = [[sortField, sortOrder]];
+                sortCriteria = isStatSort ? statSortCriteria : playerProfileSortCriteria ? playerProfileSortCriteria : [];
+            }
             return await db.Player.findAll({
                 order: sortCriteria,
                 include: [
@@ -31,12 +42,7 @@ const queries = {
                         include: statLineData(db)
                     }
                 ],
-                where: {
-                    [Op.and]: [
-                        { id: { [Op.notIn]: excludeIds } },
-                        wherePosition
-                    ]
-                }
+                where: wherePositionAndAvailable
             });
         }
         catch (error) {
@@ -48,7 +54,7 @@ const queries = {
 const mutations = {
     addStatLineForWeek: async (parent, args, { db }, info) => {
         try {
-            //TRANSACTION NEEDED
+            //TRANSACTION NEEDED - YES, REQUIRED (for Beta)
             const statistics = await db.Statistics.findOne({
                 where: { playerId: args.playerId }
             });

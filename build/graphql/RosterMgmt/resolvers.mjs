@@ -1,5 +1,5 @@
 import { Op } from 'sequelize';
-import { statLineData } from '../dataHelpers/statLineHelpers';
+import { statLineData } from '../helpers/statLineHelpers';
 import { rosterData } from '../helpers/rosterHelpers';
 const queries = {
     roster: async (root, args, { db }, info) => {
