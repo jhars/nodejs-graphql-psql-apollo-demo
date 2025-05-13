@@ -1,4 +1,4 @@
-# Fantasy Lacrosse API
+# F@nt@sy L@cr0sse API
 
 ### Tech Stack: GraphQL, Apollo, Sequelize, Redis, Typescript Demo
 
@@ -41,7 +41,12 @@ npm run watch
 npm run dev
 ```
 
+## Explore the API
+You can now visit http://localhost:4000/graphql and explore the API data graph.
+
+
 ## How to run GraphQL Queries on Postman
+You can also explore the remote server with Postman.
 ![Postman-GraphQL](https://github.com/user-attachments/assets/c260680e-3d7e-456e-8379-fa67df4933f6)
 
 
