@@ -22,6 +22,13 @@ REDIS_CONNECTION_URL="redis://root:XfPH3f2$v8L4H$N@redis-18317.c246.us-east-1-4.
 
 Run `npm install`
 
+Install Postgres locally. I prefer GUI installation found here: https://postgresapp.com/
+
+Install sequelize-cli globally:
+```
+npm install -g sequelize-cli
+```
+
 Then create the database and run migrations:
 
 ```
@@ -41,12 +48,18 @@ npm run watch
 npm run dev
 ```
 
-## Explore the API
-You can now visit http://localhost:4000/graphql and explore the API data graph.
+GraphQL Explorer Server should be running on: http://localhost:4000/graphql
+
+
+## Checkout React Native Client Code Repository
+Link to Repo: https://github.com/jhars/reactnative-graphql-demo
+
+
+## Live Demo Client App
+There is Web App Demo you are welcome explore here: https://laxapp--jqhplihc93.expo.app
 
 
 ## How to run GraphQL Queries on Postman
-You can also explore the remote server with Postman.
 ![Postman-GraphQL](https://github.com/user-attachments/assets/c260680e-3d7e-456e-8379-fa67df4933f6)
 
 
