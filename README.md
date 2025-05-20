@@ -56,7 +56,7 @@ Link to Repo: https://github.com/jhars/reactnative-graphql-demo
 
 
 ## Live Demo Client App
-There is Web App Demo you are welcome explore here: https://laxapp--g3bqmk65vf.expo.app
+There is Web App Demo you are welcome explore here: https://laxapp--a0ojxx90ss.expo.app
 
 
 ## How to run GraphQL Queries on Postman
